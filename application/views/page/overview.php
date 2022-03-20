@@ -1,382 +1,408 @@
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-  <div class="container" data-aos="fade-in">
-    <h1>SMAN 3 Bojonegoro</h1>
-    <h2>Akan terus bersinergi, berkolaborasi, serta mengembangkan dirinya dalam segala sektor usaha yang tentunya
-      bermanfaat bagi semua pihak.</h2>
-    <div class="d-flex align-items-center">
-      <i class="bx bxs-right-arrow-alt get-started-icon"></i>
-      <a href="#about" class="btn-get-started scrollto">Mulai</a>
+<section id="hero">
+  <div class="hero-container">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url('<?= base_url() ?>assets/home/img/slide/slide-1.jpg');">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              <h2 class="animate__animated animate__fadeInDown">PPDB <span>SMAN 3 BOJONEGORO</span></h2>
+              <p class="animate__animated animate__fadeInUp">Untuk kalian calon peserta didik baru SMAN 3 Bojonegoro,
+                catat baik-baik jadwal Penerimaan Peserta Didik Baru (PPDB) 2021 Tahap I dan II pada infografis
+                berikut ini ya?? Untuk informasi lebih lanjut terkait PPDB SMAN 3 Bojonegoro, silahkan buka Link
+                berikut</p>
+              <a href="#about" class="btn-get-started btn-primary animate__animated animate__fadeInUp scrollto">Daftar
+                Sekarang!</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url('<?= base_url() ?>assets/home/img/slide/slide-2.jpg');">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              <h2 class="animate__animated animate__fadeInDown">PROFILE SMAN 3 BOJONEGORO</h2>
+              <p class="animate__animated animate__fadeInUp">Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan
+                dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis,
+                dll.</p>
+              <a href="#about" class="btn-get-started btn-primary animate__animated animate__fadeInUp scrollto">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url('<?= base_url() ?>assets/home/img/slide/slide-3.jpg');">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              <h2 class="animate__animated animate__fadeInDown">Fasilitas SMAN 3 Bojonegoro</h2>
+              <p class="animate__animated animate__fadeInUp">Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan
+                dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis,
+                dll.</p>
+              <a href="#about" class="btn-get-started btn-primary animate__animated animate__fadeInUp scrollto">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
     </div>
   </div>
 </section><!-- End Hero -->
 
 <main id="main">
 
-  <!-- ======= Why Us Section ======= -->
-  <section id="why-us" class="why-us">
-    <div class="container">
+  <!-- ======= About Us Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
 
-      <div class="row">
-        <div class="col-xl-4 col-lg-5" data-aos="fade-up">
-          <div class="content">
-            <h3>Visi & Misi Perusahaan</h3>
-            <p>
-              <strong>Misi: </strong> Menjadi perusahaan industri olahan pangan nusantara yang berkelas dunia dan
-              terpecaya melalui keteguhan untuk menghasilkan kinerja yang berkualitas
-            </p>
-            <p>
-              <strong>Visi: </strong> Menyediakan produk pangan yang berkualitas melalui proses produksi yang aman,
-              higenis efisien serta ramah lingkungan ...
-            </p>
-            <div class="text-center">
-              <a href="#" class="more-btn">Selengkapnya <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 video-box">
+          <img src="<?= base_url() ?>assets/home/img/about.jpg" class="img-fluid" alt="">
+          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
         </div>
-        <div class="col-xl-8 col-lg-7 d-flex">
-          <div class="icon-boxes d-flex flex-column justify-content-center">
-            <div class="row">
-              <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon-box mt-4 mt-xl-0">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Sentra Industri Makanan Kaleng</h4>
-                  <p>Menjadi sentra industri pengolahan dan pengalengan makanan yang terintegrasi dan menjadi
-                    barometer program Ketahanan Pangan khususnya di DIY.</p>
-                </div>
-              </div>
-              <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box mt-4 mt-xl-0">
-                  <i class="bx bx-images"></i>
-                  <h4>Mengakomodir Kebutuhan dari Hulu ke Hilir</h4>
-                  <p>Mampu mengakomodir kebutuhan pengadaan <span style="font-style:italic">canned food</span> dari
-                    hulu (budidaya) sampai
-                    dengan
-                    hilir (pemasaran)</p>
-                </div>
-              </div>
-              <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box mt-4 mt-xl-0">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Inovasi bersama Stakeholder</h4>
-                  <p>Melakukan inovasi bersama Stakeholder lainnya mengangkat potensi pangan lokal yang diproduksi
-                    secara aman, higienis, dan berdaya saing</p>
-                </div>
-              </div>
-            </div>
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+          <div class="section-title">
+            <h2>Visi dan Misi</h2>
+            <p>Mewujudkan Insan yang Bertaqwa, Berakhlak Mulia, Berprestasi, Mandiri, dan Berdaya
+              Saing Global serta Peduli Lingkungan</p>
           </div>
+
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+            <h4 class="title"><a href="">Misi</a></h4>
+            <ol class="description">
+              <li>Menanamkan keimanan, dan ketaqwaan serta menerapkan tuntunan agama melalui kegiatan pembiasaan dalam
+                kehidupan sehari hari.</li>
+              <li class="mt-1"> Menciptakan insan yang unggul, dan terampil dalam prestasi akademik, olahraga, dan
+                seni.</li>
+              <li class="mt-1">...</li>
+            </ol>
+          </div>
+          <a href="#" class="btn btn-primary btn-block"> Read Mode>></a>
+
         </div>
       </div>
 
     </div>
-  </section><!-- End Why Us Section -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about  section-bg">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative" data-aos="fade-right">
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
-        </div>
-
-        <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-          <h4 data-aos="fade-up">Tentang Kami</h4>
-          <h3 data-aos="fade-up">SMAN 3 Bojonegoro </h3>
-          <p data-aos="fade-up">adalah perusahaan yang bergerak di bidang usaha industri,
-            perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu
-            rempah serta minuman dalam bentuk pengalengan (canning).</p>
-          <p data-aos="fade-up">Setelah lebih dari satu dekade berkomitmen terhadap inovasi industri pengalengan
-            dengan melibatkan potensi UMKM, akademisi, penelitian serta stakeholder lainnya, kami tetap menjaga
-            kualitas, melakukan inovasi dan fleksibilitas sesuai dengan perkembangan jaman dan market.</p>
-          <p data-aos="fade-up">Kami juga memberikan layanan konsultasi perencanaan, pengembangan, implementasi, serta
-            mentoring khususnya kepada UMKM. Mengawal harapan impian mereka untuk bisa naik kelas bahkan mampu
-            menembus pasar dunia.</p>
-          <p data-aos="fade-up">Kami menyediakan produk pangan yang berkualitas memalui proses
-            produksi yang aman,
-            higienis, efisien serta ramah lingkungan.</p>
-          <div class="row">
-
-            <div class="col-md-6 icon-box" data-aos="fade-up">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Unique</a></h4>
-              <p class="description">Produk olahan nusantara</p>
-            </div>
-
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">First to Market</a></h4>
-              <p class="description">Produk inovatif dan unggul</p>
-            </div>
-
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Tested</a></h4>
-              <p class="description">Dikerjakan oleh tim kitchen yang handal.</p>
-            </div>
-
-            <div class="col-md-6 icon-box" data-aos="fade-up">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Authentic</a></h4>
-              <p class="description">Original dalam rasa</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section><!-- End About Section -->
+  </section><!-- End About Us Section -->
 
 
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
+  <!-- ======= Our Portfolio Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
 
       <div class="section-title">
-        <h2 data-aos="fade-up">Produk</h2>
-        <p data-aos="fade-up">Produk mulai dari makanan kaleng, minuman kaleng, rempah (spice) sampai dengan minuman powder, kami produksi secara aman, higienis, efisien serta ramah lingkungan </p>
+        <h2>FASILITAS LENGKAP</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
       </div>
 
-      <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-makanan">Makanan</li>
-            <li data-filter=".filter-minuman">Minuman</li>
-            <li data-filter=".filter-rempah">Rempah</li>
-          </ul>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
+          <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
+          <h4 class="title mt-3"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+            occaecati cupiditate non provident</p>
         </div>
+        <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
+          <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
+          <h4 class="title mt-3"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+            occaecati cupiditate non provident</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
+          <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
+          <h4 class="title mt-3"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+            occaecati cupiditate non provident</p>
+        </div>
+        <a href="#" class="btn btn-block btn-info text-white" data-aos="fade-up"> Selengkapnya>></a>
       </div>
 
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        <?php $no = 1;
-        foreach ($products->result() as $row) {
-          if ($row->category === "foods") {
-            $kategori = "filter-makanan";
-          } else if ($row->category === "drinks") {
-            $kategori = "filter-minuman";
-          } else {
-            $kategori = "filter-rempah";
-          }
-          if ($no <= 12) {
-        ?>
+    </div>
+  </section>
 
-            <div class="col-lg-4 col-md-6 portfolio-item <?= $kategori ?>">
-              <img src="<?= base_url() ?>assets/home/img/product/<?= $row->image ?>" class="img-fluid" alt="<?= $row->name ?>">
-              <div class="portfolio-info">
-                <h4><?= $row->name ?></h4>
-                <p style="padding-right:50px;"><?= $row->description ?></p>
-                <a href="<?= base_url() ?>assets/home/img/product/<?= $row->image ?>" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="<?= $row->name ?>"><i class="bx bx-plus"></i></a>
-                <a href="<?= base_url() ?>product/<?= $row->slug ?>" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
 
-        <?php $no++;
-          }
-        } ?>
+  <!-- ======= Counts Section ======= -->
+  <section class="counts section-bg">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+          <div class="count-box">
+            <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
+            <span data-purecounter-start="0" data-purecounter-end="732" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Peserta Didik</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+          <div class="count-box">
+            <i class="bi bi-live-support" style="color: #46d1ff;"></i>
+            <span data-purecounter-start="0" data-purecounter-end="14630" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Alumni</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="count-box">
+            <i class="bi bi-document-folder" style="color: #c042ff;"></i>
+            <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Guru</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+          <div class="count-box">
+            <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Ekstrakulikuler</p>
+          </div>
+        </div>
 
       </div>
 
     </div>
-  </section><!-- End Portfolio Section -->
+  </section><!-- End Counts Section -->
 
-  <!-- ======= Clients Section ======= -->
-  <!-- <section id="clients" class="clients">
+  <!-- ======= Services Section ======= -->
+  <!-- <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="<?= base_url() ?>assets/home/img/clients/client-8.png" class="img-fluid" alt=""></div>
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+              occaecati cupiditate non provident</p>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-bounding-box"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-globe"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-broadcast"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+              voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar2-week"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+              soluta nobis est eligendi</p>
+          </div>
         </div>
 
       </div>
     </section> -->
-  <!-- End Clients Section -->
+  <!-- End Services Section -->
 
-  <!-- ======= Services Section ======= -->
-  <section id="services" class="services section-bg">
-    <div class="container">
+  <!-- ======= Our Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="section-title" data-aos="fade-up">
-        <h2>Target Market</h2>
-        <p>SMAN 3 Bojonegoro memiliki empat target market utama mulai maklon market sampai dengan franchise
-          market
-          .</p>
+      <div class="section-title">
+        <h2>Galeri</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+          in iste officiis commodi quidem hic quas.</p>
       </div>
 
       <div class="row">
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Retail Market</a></h4>
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action active">
-                Domestik Market
-              </a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Transmart</a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Superindo</a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Indogrosir</a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Hypermart</a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Lotte mart</a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Food Hall</a>
-              <a href="#" class="list-group-item list-group-item-action disabled">Farmer Market</a>
-              <a href="#" class="list-group-item list-group-item-action active">
-                Export Market
-              </a>
-            </div>
-          </div>
+        <div class="col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
         </div>
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Special Market</a></h4>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Organic Store</li>
-              <li class="list-group-item">Healthy Store</li>
-              <li class="list-group-item">Pharmacy Store</li>
-              <li class="list-group-item">Herbal Store</li>
-              <li class="list-group-item">Adventure Store</li>
-              <li class="list-group-item">Comunity Store</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6" data-aos="fade-up">
-          <div class="icon-box icon-box2">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Maklon Market</a></h4>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Bantuan Sosial</li>
-              <li class="list-group-item">Ransum Instansi</li>
-              <li class="list-group-item">Private Label</li>
-              <li class="list-group-item">Produk UMKM</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon-box icon-box2">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Franchise Market</a></h4>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Ghost Kitchen</li>
-              <li class="list-group-item">Reseller</li>
-              <li class="list-group-item">Dropshiper</li>
-              <li class="list-group-item">Online Store</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-  </section><!-- End Services Section -->
-
-  <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials">
-    <div class="container position-relative" data-aos="fade-up">
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="<?= base_url() ?>assets/home/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="<?= base_url() ?>assets/home/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="<?= base_url() ?>assets/home/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="<?= base_url() ?>assets/home/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <img src="<?= base_url() ?>assets/home/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div><!-- End testimonial item -->
-
-        </div>
-        <div class="swiper-pagination"></div>
       </div>
 
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section><!-- End Testimonials Section -->
 
-  <!-- ======= Team Section ======= -->
-  <section id="team" class="team section-bg">
-    <div class="container">
+  </section><!-- End Our Portfolio Section -->
+
+  <!-- ======= Our Team Section ======= -->
+  <!-- <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2 data-aos="fade-up">Team</h2>
-        <p data-aos="fade-up">Our Winning Team.</p>
+        <h2>Pegawai</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
       </div>
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
           <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url() ?>assets/home/img/team/team-1.jpg" class="img-fluid" alt="">
+            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -384,17 +410,15 @@
                 <a href=""><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
-            <div class="member-info">
-              <h4>Chandra Setiawan Kusuma</h4>
-              <span>CEO</span>
-            </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url() ?>assets/home/img/team/team-2.jpg" class="img-fluid" alt="">
+            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Sarah Jhonson</h4>
+              <span>Product Manager</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -402,17 +426,15 @@
                 <a href=""><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
-            <div class="member-info">
-              <h4>Peggy Asda</h4>
-              <span>COO</span>
-            </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url() ?>assets/home/img/team/team-3.jpg" class="img-fluid" alt="">
+            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>William Anderson</h4>
+              <span>CTO</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -420,17 +442,15 @@
                 <a href=""><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
-            <div class="member-info">
-              <h4>Rendra Nur Octora</h4>
-              <span>CFO</span>
-            </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url() ?>assets/home/img/team/team-4.jpg" class="img-fluid" alt="">
+            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -438,49 +458,113 @@
                 <a href=""><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
-            <div class="member-info">
-              <h4>Jihan</h4>
-              <span>CBD</span>
-            </div>
           </div>
         </div>
 
+        <a href="#" class="btn btn-block btn-info text-white" data-aos="fade-up"> Selengkapnya>></a>
       </div>
 
     </div>
-  </section><!-- End Team Section -->
+  </section> -->
+  <!-- End Our Team Section -->
 
-  <!-- ======= Contact Section ======= -->
-  <section id="blog" class="team blog">
-    <div class="container">
+
+
+  <!-- ======= Our Portfolio Section ======= -->
+  <section id="services" class="blog section-bg">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
 
       <div class="section-title">
-        <h2 data-aos="fade-up">Terbaru</h2>
-        <p data-aos="fade-up">Berita Terbaru, Kegiatan, Promo, dan Informasi Produk Terbaru SMAN 3 Bojonegoro</p>
+        <h2>Berita Terbaru</h2>
+        <p>Update Informasi Terbaru seputar Sekolah Menengah Atas (SMA) Negeri 3 Bojonegoro.</p>
       </div>
 
-      <div class="row justify-content-center">
-        <?php $no = 1;
+      <div class="row">
+        <?php
         foreach ($news->result() as $row) {
-          if ($no <= 4) {
         ?>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-              <div class="member">
-                <div class="member-img">
-                  <img src="<?= base_url() ?>assets/images/<?= $row->featured_image ?>" class="img-fluid" alt="<?= $row->judul ?>">
+          <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
+            <article>
+              <img src="<?= base_url() ?>assets/images/<?= $row->featured_image ?>" alt="" class="img-fluid">
+              <h6 class="title mt-3"><b><a href=""><?= $row->judul ?></a></b></h5>
+                <p class="blog-description"><?= limit_words($row->deskripsi, 20) ?></p>
+            </article>
+          </div>
+        <?php
+        }
+        ?>
+        <!-- <a href="#" class="btn btn-block btn-info text-white" data-aos="fade-up"> Selengkapnya>></a> -->
+      </div>
+    </div>
+  </section>
 
-                  <div class="member-info" style="text-align: left;">
-                    <h4><a href="<?= base_url() ?><?= $row->posttype_slug ?>/<?= $row->slug ?>" style="color:black"><?= limit_words($row->judul, 5); ?></a> </h4>
-                    <span><?= limit_words($row->deskripsi, 20); ?> </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-        <?php $no++;
-          }
-        } ?>
+  <!-- ======= Frequently Asked Questions Section ======= -->
+  <!-- <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row  d-flex align-items-stretch">
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up">
+            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
+            <p>
+              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida.
+              Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
+            <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
+            <p>
+              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec
+              ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+              ullamcorper dignissim.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
+            <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
+            <p>
+              Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
+              integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
+              Lectus urna duis convallis convallis tellus.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
+            <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
+            <p>
+              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec
+              ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+              ullamcorper dignissim.
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
+            <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
+            <p>
+              Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel
+              risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida
+              quis blandit turpis cursus in
+            </p>
+          </div>
+
+          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
+            <h4>Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?</h4>
+            <p>
+              Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc
+              vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in
+              metus vulputate eu scelerisque.
+            </p>
+          </div>
+
+        </div>
 
       </div>
-  </section><!-- End Contact Section -->
+    </section> -->
+  <!-- End Frequently Asked Questions Section -->
 
 </main><!-- End #main -->

@@ -34,7 +34,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview">
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "page") {
                                           echo "active";
                                         } ?>">
@@ -58,7 +58,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "berita") {
                                           echo "active";
@@ -116,12 +116,12 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "product") {
+            <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "galeri") {
                                           echo "active";
                                         } ?>">
-              <i class="fab fa-product-hunt  nav-icon"></i>
+              <i class="fas fa-images  nav-icon"></i>
               <p>
-                Product
+                Galeri
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -129,19 +129,13 @@
               <li class="nav-item">
                 <a href="<?= base_url('admin/product') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Lihat Product</p>
+                  <p>Foto</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= base_url('admin/product/add') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Product</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('admin/product/category') ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Category Product</p>
+                  <p>Video</p>
                 </a>
               </li>
             </ul>
@@ -157,6 +151,28 @@
             </a>
             
           </li> -->
+          <li class="nav-item has-treeview">
+            <a href="<?= base_url('admin/users') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "facilities") {
+                                                                        echo "active";
+                                                                      } ?>">
+              <i class="nav-icon fa fa-building"></i>
+              <p>
+                Fasilitas
+              </p>
+            </a>
+
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="<?= base_url('admin/users') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "Profile") {
+                                                                        echo "active";
+                                                                      } ?>">
+              <i class="nav-icon fa fa-info"></i>
+              <p>
+                Profile
+              </p>
+            </a>
+
+          </li>
           <li class="nav-item has-treeview">
             <a href="<?= base_url('admin/users') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "users") {
                                                                         echo "active";

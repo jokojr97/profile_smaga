@@ -75,6 +75,8 @@ if ($deskripsi == 1) {
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="<?= $des ?>" />
   <meta name="author" content="JosanMultiPangan" />
@@ -92,22 +94,23 @@ if ($deskripsi == 1) {
 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta property="og:url" content="<?= $url ?>" />
-  <meta property="og:site_name" content="prc-initiative.org" />
+  <!-- <meta property="og:site_name" content="prc-initiative.org" /> -->
   <meta property="og:description" content="<?= $key ?>" />
   <meta property="og:image" content="<?= base_url() ?>assets/images/<?= $metaimg ?>" />
   <meta name="twitter:description" content="<?= $key ?>">
-  <meta name="twitter:domain" content="prc-initiative.org">
+  <!-- <meta name="twitter:domain" content="smaga.org"> -->
 
   <title><?= $title ?></title>
 
   <!-- Favicons -->
-  <link href="<?= base_url() ?>assets/home/img/favicon.png" rel="icon">
-  <link href="<?= base_url() ?>assets/home/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?= base_url() ?>assets/home/img/icon.jpg" rel="icon">
+  <link href="<?= base_url() ?>assets/home/img/icon.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link href="<?= base_url() ?>assets/home/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/home/vendor/aos/aos.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/home/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/home/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -119,58 +122,79 @@ if ($deskripsi == 1) {
   <link href="<?= base_url() ?>assets/home/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: Flexor - v4.6.0
-  * Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+  * Template Name: Mamba - v4.7.0
+  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .blog-description {
+      line-height: 24px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
+  <section id="topbar" class="d-flex align-items-center bg-primary text-white">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:Josanmultipangan@gmail.com">Josanmultipangan@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span><a href="https://wa.me/6281232062741">+62 812 3206 2741</a></span></i>
+        <i class="bi bi-envelope-fill"></i><a href="mailto:sman3bojonegoro@gmail.com" class="text-white">sman3bojonegoro@gmail.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> +081 130 550 222
       </div>
-
-      <div class="cta d-none d-md-flex align-items-center">
-        <a href="#about" class="scrollto">Mulai</a>
+      <div class="social-links d-none d-md-block">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
   </section>
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center">
 
-      <div class="logo">
-
-        <h1><img src="<?= base_url() ?>assets/home/img/logo_jmp.png" alt=""> &nbsp;<a href="<?= base_url() ?>" style="margin-top:10px;">PT. JOSAN
-            MULTI PANGAN</a></h1>
+      <div class="logo me-auto">
+        <h1><a href="index.html"><img src="<?= base_url() ?>assets/home/img/logo.png" alt=""></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="<?= base_url() ?>assets/home/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto <?= $menu == 'home' ? 'active' : '' ?>" href="<?= base_url() ?>#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="<?= base_url() ?>#about">Tentang Kami</a></li>
-          <li><a class="nav-link scrollto <?= $menu == 'product' ? 'active' : '' ?>" href="<?= base_url() ?>product">Produk</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Produk</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#about">Profile</a></li> -->
+          <li><a class="nav-link scrollto" href="#services">Berita</a></li>
+          <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="dropdown"><a href="#"><span>Makanan Kaleng</span></a>
+              <li><a href="#">Ekstrakulikuler</a></li>
+              <li class="dropdown"><a href="#"><span>Program Kerja</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Program Kerja 1</a></li>
+                  <li><a href="#">Program Kerja 2</a></li>
+                  <li><a href="#">Program Kerja 3</a></li>
+                  <li><a href="#">Program Kerja 4</a></li>
+                  <li><a href="#">Program Kerja 5</a></li>
+                </ul>
               </li>
-              <li><a href="#">Bumbu (Spices)</a></li>
-              <li><a href="#">Minuman Powder</a></li>
+              <li><a href="#">Visi Misi</a></li>
+              <li><a href="#">Fasilitas</a></li>
+              <li><a href="#">Prestasi</a></li>
+              <li><a href="#">Pegawai</a></li>
             </ul>
-          </li> -->
-          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
-          <li><a href="<?= base_url() ?>berita" class="nav-link scrollto <?= $menu == 'berita' ? 'active' : '' ?>">Berita</a></li>
-          <li><a class="nav-link scrollto" href="<?= base_url() ?>#team">Team</a></li>
-          <li><a class="nav-link scrollto <?= $menu == 'contact' ? 'active' : '' ?>" href="<?= base_url() ?>contact">Contact Us</a></li>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link scrollto" href="#team">Galeri <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Foto</a></li>
+              <li><a href="#">Video</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#team">Info Kelulusan</a></li>
+          <li><a class="nav-link scrollto" href="#contact">SPTJM KK PPDB 2021</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

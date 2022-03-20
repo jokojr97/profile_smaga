@@ -25,14 +25,14 @@ class Home extends CI_Controller
 
 	public function index()
 	{
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data['title'] = "Home";
 		$data["menu"] = "home";
 		$data["url"] = base_url();
 		$data['news'] = $this->m_post->get_beritas();
-		$data['programs'] = $this->m_program->get_programs();
-		$data['products'] = $this->m_product->get_product();
+		// $data['programs'] = $this->m_galeri->get_foto();
+		// $data['products'] = $this->m_facilities->get_facilities();
 		// $this->load->view('page/_partial/header', $data);
 		$this->load->view('page/_partial/header', $data);
 		$this->load->view('page/overview', $data);
@@ -41,8 +41,8 @@ class Home extends CI_Controller
 
 	public function product()
 	{
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data['title'] = "List Produk";
 		$data["breadcumb"] = "Product";
 		$data["menu"] = "product";
@@ -61,8 +61,8 @@ class Home extends CI_Controller
 
 	public function contact()
 	{
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data['title'] = "Contact Us";
 		$data["breadcumb"] = "Contact Us";
 		$data["menu"] = "contact";
@@ -92,8 +92,8 @@ class Home extends CI_Controller
 		$data['product'] = $product;
 		$data['breadcumb'] = 'Product';
 		$data['menu'] = 'product';
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["url"] = base_url();
 		$data['title'] = $product['name'];
 		$data['berita_list'] = $this->m_post->get_posts_all();
@@ -117,7 +117,7 @@ class Home extends CI_Controller
 		}
 		$data['id_berita'] = $id_berita;
 		$data['berita'] = $this->m_post->get_berita_id($id_berita);
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data['title'] = "SMAN 3 Bojonegoro";
 		$data["breadcumb"] = "Post";
 		$post = $data['berita'];
@@ -140,8 +140,8 @@ class Home extends CI_Controller
 	}
 	public function beritanotfound()
 	{
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["menu"] = "berita";
 		$data["url"] = base_url() . "berita/notfound";
 		$data['title'] = "Not Found - ";
@@ -155,8 +155,8 @@ class Home extends CI_Controller
 	public function berita()
 	{
 		$data['title'] = "Berita";
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["url"] = base_url() . "berita";
 		$data['category_list'] = $this->m_category->get_category();
 		$data["breadcumb"] = "Berita";
@@ -251,8 +251,8 @@ class Home extends CI_Controller
 		$search = $this->m_post->search($search_unslug);
 
 		$data['title'] = "Pencarian: " . $search_unslug;
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["url"] = base_url() . "search/" . $uri;
 		$data["menu"] = "berita";
 		$data["breadcumb"] = "Search";
@@ -323,8 +323,8 @@ class Home extends CI_Controller
 		}
 		$get_kategori_id = $this->m_category->get_category_by_id($uri);
 
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["url"] = base_url() . "category/" . $uri;
 		$data["menu"] = "berita";
 		$data["breadcumb"] = "Category";
@@ -413,8 +413,8 @@ class Home extends CI_Controller
 		$data["url"] = base_url() . "posttipe/" . $uri;
 		$data['title'] = $get_posttipe_slug['posttype_name'];
 		$data['breadcumb'] = "Posttipe";
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		$data['posttype_list'] = $this->m_post->get_type_post();
@@ -489,8 +489,8 @@ class Home extends CI_Controller
 		$data["url"] = base_url() . "tag/" . $uri;
 		$data['breadcumb'] = "Tag";
 		$data['title'] = $get_tag_slug['name'];
-		$data['deskripsi'] = "SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).";
-		$data['keyword'] = "SMAN 3 Bojonegoro,  Josan, Multipangan, Josan Multipangan, canning, makanan kaleng";
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["menu"] = "berita";
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();

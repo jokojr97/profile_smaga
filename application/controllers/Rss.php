@@ -19,11 +19,11 @@ class Rss extends CI_Controller
 		// echo "halaman rss";
 		$data = array(
 			'encoding' 			=> 'utf-8',
-			'feed_name' 		=> 'Poverty Resouce Center Initiative',
+			'feed_name' 		=> 'SMAN 3 Bojonegoro',
 			'feed_url' 			=> base_url() . 'feed/',
-			'page_description' 	=> 'SMAN 3 Bojonegoro adalah perusahaan yang bergerak di bidang usaha industri, perdanganan serta jasa. salah satu sub bidang kami adalah pengembangan dan inovasi olahan pangan, bumbu rempah serta minuman dalam bentuk pengalengan (canning).',
+			'page_description' 	=> 'SMAN 3 Bojonegoro adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.',
 			'page_language' 	=> 'in',
-			'creator_email' 	=> 'info.prcinitiative@gmail.com',
+			'creator_email' 	=> 'sman3bojonegoro@gmail.com',
 			'posts' 			=> $this->m_rss->get_posts(10)
 		);
 
