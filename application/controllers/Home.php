@@ -58,6 +58,25 @@ class Home extends CI_Controller
 		$this->load->view('page/_partial/footer');
 	}
 
+	public function profiles()
+	{
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
+		$data['title'] = "Profiles";
+		$data["breadcumb"] = "Profile";
+		$data["menu"] = "profile";
+		$data["url"] = base_url();
+		$data['berita_list'] = $this->m_post->get_posts_all();
+		$data['category_list'] = $this->m_category->get_category();
+		// $data['news'] = $this->m_post->get_beritas();
+		// $data['programs'] = $this->m_program->get_programs();
+		$data['products'] = $this->m_product->get_product();
+		// $this->load->view('page/_partial/header', $data);
+		$this->load->view('page/_partial/header', $data);
+		$this->load->view('page/profiles', $data);
+		$this->load->view('page/_partial/footer');
+	}
+
 
 	public function contact()
 	{

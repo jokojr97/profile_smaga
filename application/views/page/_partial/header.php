@@ -132,13 +132,19 @@ if ($deskripsi == 1) {
       line-height: 24px;
       font-size: 14px;
     }
+
+    /* 
+    #hero {
+      height: calc(110vh - 120px);
+      background: url('<?= base_url() ?>assets/header3.jpg') no-repeat center center fixed;
+    } */
   </style>
 </head>
 
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center bg-primary text-white">
+  <section id="topbar" class="d-flex align-items-center text-white" style="background-color: #017cc4;">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:sman3bojonegoro@gmail.com" class="text-white">sman3bojonegoro@gmail.com</a>
@@ -158,20 +164,21 @@ if ($deskripsi == 1) {
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html"><img src="<?= base_url() ?>assets/home/img/logo.png" alt=""></a></h1>
+        <h1><a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/home/img/logo.png" alt=""></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="<?= base_url() ?>assets/home/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto <?= $menu == 'home' ? 'active' : '' ?>" href="<?= base_url() ?>">Home</a></li>
           <!-- <li><a class="nav-link scrollto" href="#about">Profile</a></li> -->
-          <li><a class="nav-link scrollto" href="#services">Berita</a></li>
-          <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto <?= $menu == 'berita' ? 'active' : '' ?>" href="<?= base_url() ?>berita">Berita</a></li>
+          <li class="dropdown"><a href="<?= base_url() ?>profiles" class="<?= $menu == 'profile' ? 'active' : '' ?>"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
+              <li><a href="<?= base_url() ?>profiles">Profiles</a></li>
               <li><a href="#">Ekstrakulikuler</a></li>
-              <li class="dropdown"><a href="#"><span>Program Kerja</span> <i class="bi bi-chevron-right"></i></a>
+              <!-- <li class="dropdown"><a href="#"><span>Program Kerja</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Program Kerja 1</a></li>
                   <li><a href="#">Program Kerja 2</a></li>
@@ -179,11 +186,11 @@ if ($deskripsi == 1) {
                   <li><a href="#">Program Kerja 4</a></li>
                   <li><a href="#">Program Kerja 5</a></li>
                 </ul>
-              </li>
+              </li> -->
               <li><a href="#">Visi Misi</a></li>
               <li><a href="#">Fasilitas</a></li>
               <li><a href="#">Prestasi</a></li>
-              <li><a href="#">Pegawai</a></li>
+              <!-- <li><a href="#">Pegawai</a></li> -->
             </ul>
           </li>
           <li class="dropdown">

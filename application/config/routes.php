@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -95,11 +95,10 @@ $route['admin/kcfinder'] = 'admins/teskcfinder/index';
 
 // home
 $route['berita'] = 'home/berita';
+$route['profiles'] = 'home/profiles';
 $route['product'] = 'home/product';
 $route['product/(:any)'] = 'home/detail_product';
 $route['donasi'] = 'home/donasi';
-$route['podcast'] = 'home/podcast';
-$route['podcast/(:any)'] = 'home/detail';
 $route['search/(:any)'] = 'home/search';
 $route['search'] = 'home/search';
 $route['searchproses'] = 'home/searchproses';
@@ -107,28 +106,11 @@ $route['berita/notfound'] = 'home/beritanotfound';
 $route['post/notfound'] = 'home/beritanotfound';
 $route['berita/(:any)'] = 'home/detail';
 $route['post/(:any)'] = 'home/detail';
-$route['fokus-programs/(:any)'] = 'home/program';
-$route['policy-brief/(:any)'] = 'home/detail';
 $route['kegiatan/(:any)'] = 'home/detail';
-$route['kolom/(:any)'] = 'home/detail';
-$route['kliping/(:any)'] = 'home/detail';
-$route['poster/(:any)'] = 'home/detail';
-$route['factsheet/(:any)'] = 'home/detail';
-$route['opini/(:any)'] = 'home/detail';
 $route['category/(:any)'] = 'home/category';
 $route['posttipe/(:any)'] = 'home/posttipe';
 $route['tag/(:any)'] = 'home/tag';
 $route['tentangkami'] = 'home/tentangkami';
-// peta
-$route['peta_kecamatan'] = 'home/peta_kecamatan';
-$route['datajatim/(:any)/(:any)'] = 'home/datajatim';
-$route['peta_desa'] = 'home/peta_desa';
-$route['map'] = 'home/map';
-$route['peta'] = 'home/peta';
-$route['peta_desa/(:any)'] = 'home/peta_desa';
-$route['peta_kabupaten'] = 'home/peta_kabupaten';
-$route['peta_kabupaten/(:any)'] = 'home/peta_kabupaten';
-$route['peta_kecamatan'] = 'home/peta_kecamatan';
 // hubungi kami
 $route['contact'] = 'home/contact';
 $route['404_override'] = '';

@@ -1,0 +1,68 @@
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active"
+            style="background-image: url('<?= base_url() ?>assets/home/img/slide/slide-1.jpg');">
+            <div class="carousel-container">
+                <div class="carousel-content container">
+                    <h2 class="animate__animated animate__fadeInDown">PPDB <span>SMAN 3 BOJONEGORO</span></h2>
+                    <p class="animate__animated animate__fadeInUp">Untuk kalian calon peserta didik baru SMAN 3
+                        Bojonegoro,
+                        catat baik-baik jadwal Penerimaan Peserta Didik Baru (PPDB) 2021 Tahap I dan II pada infografis
+                        berikut ini ya?? Untuk informasi lebih lanjut terkait PPDB SMAN 3 Bojonegoro, silahkan buka Link
+                        berikut</p>
+                    <a href="#about"
+                        class="btn-get-started btn-primary animate__animated animate__fadeInUp scrollto">Daftar
+                        Sekarang!</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url('<?= base_url() ?>assets/home/img/slide/slide-2.jpg');">
+            <div class="carousel-container">
+                <div class="carousel-content container">
+                    <h2 class="animate__animated animate__fadeInDown">PROFILE SMAN 3 BOJONEGORO</h2>
+                    <p class="animate__animated animate__fadeInUp">Salah Satu Sekolah Menengah Atas (SMA) Negeri
+                        unggulan
+                        dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal,
+                        tenis,
+                        dll.</p>
+                    <a href="#about"
+                        class="btn-get-started btn-primary animate__animated animate__fadeInUp scrollto">Read
+                        More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url('<?= base_url() ?>assets/home/img/slide/slide-3.jpg');">
+            <div class="carousel-container">
+                <div class="carousel-content container">
+                    <h2 class="animate__animated animate__fadeInDown">Fasilitas SMAN 3 Bojonegoro</h2>
+                    <p class="animate__animated animate__fadeInUp">Salah Satu Sekolah Menengah Atas (SMA) Negeri
+                        unggulan
+                        dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal,
+                        tenis,
+                        dll.</p>
+                    <a href="#about"
+                        class="btn-get-started btn-primary animate__animated animate__fadeInUp scrollto">Read
+                        More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+
+</div>
