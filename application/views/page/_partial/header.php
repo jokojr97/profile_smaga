@@ -102,6 +102,9 @@ if ($deskripsi == 1) {
 
   <title><?= $title ?></title>
 
+  <!-- datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"> -->
   <!-- Favicons -->
   <link href="<?= base_url() ?>assets/home/img/icon.jpg" rel="icon">
   <link href="<?= base_url() ?>assets/home/img/icon.jpg" rel="apple-touch-icon">
@@ -118,6 +121,14 @@ if ($deskripsi == 1) {
   <link href="<?= base_url() ?>assets/home/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/home/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- leaflet -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+  <!-- end leaflet -->
+
   <!-- Template Main CSS File -->
   <link href="<?= base_url() ?>assets/home/css/style.css" rel="stylesheet">
 
@@ -128,9 +139,21 @@ if ($deskripsi == 1) {
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
+    @media screen and (max-width: 768px) {
+      section {
+        padding: 20px 0;
+        overflow: hidden;
+      }
+
+    }
+
     .blog-description {
       line-height: 24px;
       font-size: 14px;
+    }
+
+    #map {
+      height: 210px;
     }
 
     /* 
@@ -148,7 +171,7 @@ if ($deskripsi == 1) {
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:sman3bojonegoro@gmail.com" class="text-white">sman3bojonegoro@gmail.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i> +081 130 550 222
+        <i class="bi bi-phone-fill phone-icon"></i> 081 130 550 222
       </div>
       <div class="social-links d-none d-md-block">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>

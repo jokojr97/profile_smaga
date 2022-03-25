@@ -3,8 +3,38 @@
   <img src="<?= base_url() ?>assets/header3.jpg" alt="" class="img-fluid" style="width: 105%;">
 </section><!-- End Hero -->
 
-<main id="main">
 
+<main id="main">
+  <section id="slider">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="<?= base_url() ?>assets/home/img/slide/slider1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="<?= base_url() ?>assets/home/img/slide/slider2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="<?= base_url() ?>assets/home/img/slide/slider3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
   <!-- ======= About Us Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
@@ -71,7 +101,7 @@
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
             occaecati cupiditate non provident</p>
         </div>
-        <a href="#" class="btn btn-block btn-info text-white" data-aos="fade-up"> Selengkapnya>></a>
+        <a href="#" class="btn btn-block btn-primary text-white bg-smaga" data-aos="fade-up"> Selengkapnya>></a>
       </div>
 
     </div>
@@ -128,19 +158,16 @@
 
       <div class="section-title">
         <h2>Galeri</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
       </div>
 
       <div class="row">
         <div class="col-lg-12">
-          <ul id="portfolio-flters">
+          <!-- <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-app"></li>
             <li data-filter=".filter-card">Card</li>
             <li data-filter=".filter-web">Web</li>
-          </ul>
+          </ul> -->
         </div>
       </div>
 
@@ -150,11 +177,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>App</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -164,11 +190,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>Web</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -178,11 +203,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>App</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -192,11 +216,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>Card</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -206,11 +229,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>Web</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -220,11 +242,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>App</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -234,11 +255,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>Card</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -248,11 +268,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>Card</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
@@ -262,11 +281,10 @@
           <div class="portfolio-wrap">
             <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>SMA N 3 Bojonegoro</h4>
+              <!-- <p>Web</p> -->
               <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
               </div>
             </div>
           </div>
