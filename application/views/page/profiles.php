@@ -113,65 +113,12 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Perpustakaan</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/kantin.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Kantin</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/mushola.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Mushola</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Perpustakaan</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/kantin.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Kantin</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/mushola.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Mushola</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Perpustakaan</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/kantin.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Kantin</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-                    <img src="<?= base_url() ?>assets/home/img/mushola.jpg" alt="" class="img-fluid">
-                    <h4 class="title mt-3"><a href="">Mushola</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <!-- <a href="#" class="btn btn-block btn-info text-white" data-aos="fade-up"> Selengkapnya>></a> -->
+                <?php foreach ($fasilitas->result() as $row) { ?>
+                    <div class="col-lg-3 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
+                        <img src="<?= base_url() ?>assets/home/img/<?= (isset($row->image)) ? $row->image : 'perpustakaan.jpg' ?>" alt="" class="img-fluid">
+                        <h4 class="title mt-3"><a href=""><?= $row->name ?></a></h4>
+                    </div>
+                <?php } ?>
             </div>
 
         </div>
@@ -224,7 +171,7 @@
 
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="extra" class="services">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -232,42 +179,17 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                    <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
-                    <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                    <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                        occaecati cupiditate non provident</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><i class="bi bi-bounding-box"></i></div>
-                    <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                    <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat tarad limino ata</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><i class="bi bi-globe"></i></div>
-                    <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                    <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><i class="bi bi-broadcast"></i></div>
-                    <h4 class="title"><a href="">Magni Dolores</a></h4>
-                    <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon"><i class="bi bi-brightness-high"></i></div>
-                    <h4 class="title"><a href="">Nemo Enim</a></h4>
-                    <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque</p>
-                </div>
-                <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon"><i class="bi bi-calendar2-week"></i></div>
-                    <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                    <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-                        soluta nobis est eligendi</p>
-                </div>
+                <?php foreach ($ekstra->result() as $row) { ?>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="<?= $row->icon ?>"></i></div>
+                        <h4 class="title"><a href=""><?= $row->nama ?></a></h4>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum
+                            mollit anim id est laborum</p>
+                        <!-- <p class="description"><?= (isset($row->keterangan)) ? $row->keterangan : '' ?></p> -->
+
+                    </div>
+                <?php } ?>
             </div>
 
         </div>
@@ -285,633 +207,44 @@
                         <table class="table table-striped" style="font-size: 13px;" id="example">
                             <thead>
                                 <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Tanggal</th>
-                                    <th scope="col">Jenis Kejuaraan</th>
-                                    <th scope="col">Piala Bergilir/Tetap</th>
-                                    <th scope="col">Juara</th>
-                                    <th scope="col">Tingkat Kejuaraan</th>
-                                    <th scope="col">Juara Dibidang</th>
-                                    <th scope="col">Atas Nama</th>
+                                    <th scope="col" class="text-center">No</th>
+                                    <th scope="col" class="text-center">Tanggal</th>
+                                    <th scope="col" class="text-center">Jenis Kejuaraan</th>
+                                    <th scope="col" class="text-center">Piala Bergilir/Tetap</th>
+                                    <th scope="col" class="text-center">Juara</th>
+                                    <th scope="col" class="text-center">Tingkat Kejuaraan</th>
+                                    <th scope="col" class="text-center">Juara Dibidang</th>
+                                    <th scope="col" class="text-center">Atas Nama</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td width="40">1
-                                    </td>
-                                    <td width="85">22-04-2014</td>
-                                    <td width="125">FUTSAL</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">I
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">2
-                                    </td>
-                                    <td width="85">30-04-2014</td>
-                                    <td style="width: 70px;">SENI TARI</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">IV
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">FLS2N</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">3
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">SENI
-                                        KRIYA</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">IV
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">FLS2N</td>
-                                    <td width="211">AHMAD
-                                        KHOIRUL SETIAWAN</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">4
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">SENI
-                                        TEATER</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">IV
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">FLS2N</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">5
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">VOCAL</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">IV
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">FLS2N</td>
-                                    <td width="211">TRAS
-                                        SATIRA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">6
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">BOLA
-                                        BASKET</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">I
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">7
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">SEPAK
-                                        TAKRAW</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">I
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">8
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">BOLA
-                                        VOLI</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">9
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">RENANG 50
-                                        M</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">I
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">SIKA
-                                        YUKI&nbsp; WARTA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">10
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">RENANG 50
-                                        M</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">I
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">SIKA
-                                        YUKI&nbsp; WARTA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">11
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">CATUR</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">M.ALFIAN
-                                        ROSYAD</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">12
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">BULU
-                                        TANGKIS</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">0LAH
-                                        RAGA</td>
-                                    <td width="211">WINDA
-                                        YOLANDRA AGUSTINE</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">13
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">BULU
-                                        TANGKIS</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIARA
-                                        TRIYANADA AYU NUR SETYO</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">14
-                                    </td>
-                                    <td width="85">30-05-2014</td>
-                                    <td width="125">TOLAK
-                                        PELURU</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">DWI RETNO
-                                        .S</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">15
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">LARI 100
-                                        M</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">ILHAM
-                                        CAHYONO</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">16
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">LARI 100
-                                        M</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">II
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">APRILIANA
-                                        DESSY. P</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">17
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">LOMPAT
-                                        JAUH</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">II
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">APRILIANA
-                                        DESSY. P</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">18
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">BOLA
-                                        VOLY</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">V
-                                    </td>
-                                    <td width="81">JATIM</td>
-                                    <td width="136">JAMBORE
-                                        KOPSEK</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">19
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">STAND UP
-                                        COMEDY</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">IV
-                                    </td>
-                                    <td width="81">JATIM</td>
-                                    <td width="136">JAMBORE
-                                        KOPSEK</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">20
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">KREATIVITAS</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">II
-                                    </td>
-                                    <td width="81">JATIM</td>
-                                    <td width="136">JAMBORE
-                                        KOPSEK</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">21
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">UK
-                                    </td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">IV
-                                    </td>
-                                    <td width="81">JATIM</td>
-                                    <td width="136">JAMBORE
-                                        KOPSEK</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">22
-                                    </td>
-                                    <td width="85">&nbsp;
-                                        -08-2014</td>
-                                    <td width="125">
-                                        <ol>
-                                            <li>TAKRAW
-                                                PA</li>
-                                        </ol>
-                                    </td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">II
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">23
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125">
-                                        <ol>
-                                            <li>TAKRAW
-                                                PI</li>
-                                        </ol>
-                                    </td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">KABUPATEN</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40">24
-                                    </td>
-                                    <td width="85">24-8-2014</td>
-                                    <td width="125">FUTSAL</td>
-                                    <td width="95">TETAP</td>
-                                    <td width="64">III
-                                    </td>
-                                    <td width="81">FKMB
-                                        UNESA</td>
-                                    <td width="136">OLAH
-                                        RAGA</td>
-                                    <td width="211">TIM
-                                        SMAGA</td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>25</span>
-                                    </td>
-                                    <td width="85"><span>09/05/2014</span></td>
-                                    <td width="125"><span>EGRANG</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>OR
-                                            TRADISIONAL</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>26</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>HADANG</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>OR
-                                            TRADISIONAL</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>27</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>TEROMPAH
-                                            P</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>II</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>OR
-                                            TRADISIONAL</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>28</span>
-                                    </td>
-                                    <td width="85"><span>15-9-2014</span></td>
-                                    <td width="125"><span>ACS
-                                            AWAED</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>UKS</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>29</span>
-                                    </td>
-                                    <td width="85"><span>15-9-2015</span></td>
-                                    <td width="125"><span>KARATE</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>III</span>
-                                    </td>
-                                    <td width="81"><span>&nbsp;KAPOLDA</span>
-                                    </td>
-                                    <td width="136"><span>OLAHRAGA</span></td>
-                                    <td width="211"><span>LISMA
-                                            DANY S</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>30</span>
-                                    </td>
-                                    <td width="85"><span>16-9-2014</span></td>
-                                    <td width="125"><span>GERAK
-                                            JALAN 17 KM</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>II</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>HUT RI
-                                            KE-69</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>31</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>LPI</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>HUT RI
-                                            KE-69</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>32</span>
-                                    </td>
-                                    <td width="85"><span>27-9-2014</span></td>
-                                    <td width="125"><span>MUSIK</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>III</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>HUT RI
-                                            KE-69</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>33</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>50 M
-                                            G.BEBAS PI</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>FITRI
-                                            KARTIKA .N</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>34</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>50 M
-                                            G.DADA PI</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>SHIKA
-                                            YUKI</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>35</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>50 M
-                                            G.DADA PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>FANSO
-                                            ELGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>36</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>50
-                                            MG.BEBAS PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>RISKI
-                                            FIRMAN</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>37</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>100
-                                            G.BEBAS PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>FANSO
-                                            ELGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>38</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>50 M
-                                            G.BEBAS PI</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>II</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>SHIKA
-                                            YUKI</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>39</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>50 M
-                                            G.DADA PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>II</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>PUNGKY</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>40</span>
-                                    </td>
-                                    <td width="85">&nbsp;</td>
-                                    <td width="125"><span>100
-                                            G.BEBAS PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>II</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>PORDA</span></td>
-                                    <td width="211"><span>RISKI
-                                            FIRMAN</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>41</span>
-                                    </td>
-                                    <td width="85"><span>10/10/2014</span></td>
-                                    <td width="125"><span>BASKET
-                                            PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>iii</span>
-                                    </td>
-                                    <td width="81"><span>KAB
-                                            TUBAN</span></td>
-                                    <td width="136"><span>HUT SEMEN
-                                            INDO</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
-                                <tr>
-                                    <td width="40"><span>42</span>
-                                    </td>
-                                    <td width="85"><span>15-10-2014</span></td>
-                                    <td width="125"><span>BASKET
-                                            PA</span></td>
-                                    <td width="95"><span>TETAP</span></td>
-                                    <td width="64"><span>I</span>
-                                    </td>
-                                    <td width="81"><span>KABUPATEN</span></td>
-                                    <td width="136"><span>POR
-                                            PELAJAR</span></td>
-                                    <td width="211"><span>TIM
-                                            SMAGA</span></td>
-                                </tr>
+                                <?php
+                                $no = 1;
+                                foreach ($prestasi->result() as $row) {
+                                ?>
+
+                                    <tr>
+                                        <td width="40" class="text-center">
+                                            <?= $no ?>
+                                        </td>
+                                        <td width="85" class="text-center"><?= (isset($row->tanggal)) ? $row->tanggal : '' ?></td>
+                                        <td width="125"><?= (isset($row->jenis_kejuaraan)) ? $row->jenis_kejuaraan : '' ?></td>
+                                        <td width="95" class="text-center"><?= (isset($row->jenis_piala)) ? $row->jenis_piala : '' ?></td>
+                                        <td width="64" class="text-center">
+                                            <?= (isset($row->juara)) ? $row->juara : '' ?>
+                                        </td>
+                                        <td width="81" class="text-center"><?= (isset($row->tingkat_kejuaraan)) ? $row->tingkat_kejuaraan : '' ?></td>
+                                        <td width="136" class="text-center">
+                                            <?= (isset($row->bidang)) ? $row->bidang : '' ?>
+                                        </td>
+                                        <td width="211" class="text-center">
+                                            <?= (isset($row->nama)) ? $row->nama : '' ?>
+                                        </td>
+                                    </tr>
+                                <?php
+                                    $no++;
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>

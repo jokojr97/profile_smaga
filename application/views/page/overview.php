@@ -101,7 +101,7 @@
           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
             occaecati cupiditate non provident</p>
         </div>
-        <a href="#" class="btn btn-block btn-primary text-white bg-smaga" data-aos="fade-up"> Selengkapnya>></a>
+        <a href="<?= base_url() ?>profiles#services" class="btn btn-block btn-primary text-white bg-smaga" data-aos="fade-up"> Selengkapnya>></a>
       </div>
 
     </div>
@@ -394,7 +394,7 @@
           <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
             <article>
               <img src="<?= base_url() ?>assets/images/<?= $row->featured_image ?>" alt="" class="img-fluid">
-              <h6 class="title mt-3"><b><a href=""><?= $row->judul ?></a></b></h5>
+              <h6 class="title mt-3"><b><a href="<?= base_url() ?>berita/<?= $row->slug ?>"><?= $row->judul ?></a></b></h5>
                 <p class="blog-description"><?= limit_words($row->deskripsi, 20) ?></p>
             </article>
           </div>

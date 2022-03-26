@@ -96,7 +96,7 @@ $route['admin/kcfinder'] = 'admins/teskcfinder/index';
 // home
 $route['berita'] = 'home/berita';
 $route['profiles'] = 'home/profiles';
-$route['product'] = 'home/product';
+$route['galeri/foto'] = 'home/galerifoto';
 $route['product/(:any)'] = 'home/detail_product';
 $route['donasi'] = 'home/donasi';
 $route['search/(:any)'] = 'home/search';

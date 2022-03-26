@@ -6,7 +6,7 @@
 
         <div class="col-lg-3 col-md-6 footer-info">
           <!-- <h3>Mamba</h3> -->
-          <img src="<?= base_url() ?>assets/home/img/logo.png" alt="Logo SMA Negeri 3 Bojonegoro" class="img-fluid mb-2">
+          <img src="<?= base_url() ?>assets/home/img/logopth.png" alt="Logo SMA Negeri 3 Bojonegoro" class="img-fluid mb-2">
           <p>
             Jl. Monginsidi Nomor 09 <br>
             Kabupaten Bojonegoro, Jawa Timur<br><br>

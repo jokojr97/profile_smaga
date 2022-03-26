@@ -11,6 +11,7 @@ class Home extends CI_Controller
 		$this->load->model('m_home');
 		$this->load->model('m_product');
 		$this->load->model('m_post');
+		$this->load->model('m_prestasi');
 		$this->load->model('m_category');
 		$this->load->model('m_keyword');
 		$this->load->model('m_program');
@@ -27,7 +28,7 @@ class Home extends CI_Controller
 	{
 		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
 		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
-		$data['title'] = "Home";
+		$data['title'] = "Website Resmi";
 		$data["menu"] = "home";
 		$data["url"] = base_url();
 		$data['news'] = $this->m_post->get_beritas();
@@ -68,12 +69,33 @@ class Home extends CI_Controller
 		$data["url"] = base_url();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
-		// $data['news'] = $this->m_post->get_beritas();
+		$data['prestasi'] = $this->m_prestasi->get_prestasi();
+		$data['ekstra'] = $this->m_prestasi->get_ekstra();
+		$data['fasilitas'] = $this->m_prestasi->get_fasilitas();
 		// $data['programs'] = $this->m_program->get_programs();
 		$data['products'] = $this->m_product->get_product();
 		// $this->load->view('page/_partial/header', $data);
 		$this->load->view('page/_partial/header', $data);
 		$this->load->view('page/profiles', $data);
+		$this->load->view('page/_partial/footer');
+	}
+
+	public function galerifoto()
+	{
+		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
+		$data['title'] = "Galeri";
+		$data["breadcumb"] = "Galeri/Foto";
+		$data["menu"] = "galeri";
+		$data["url"] = base_url();
+		$data['berita_list'] = $this->m_post->get_posts_all();
+		$data['category_list'] = $this->m_category->get_category();
+		// $data['news'] = $this->m_post->get_beritas();
+		// $data['programs'] = $this->m_program->get_programs();
+		// $data['products'] = $this->m_product->get_product();
+		// $this->load->view('page/_partial/header', $data);
+		$this->load->view('page/_partial/header', $data);
+		$this->load->view('page/galerifoto', $data);
 		$this->load->view('page/_partial/footer');
 	}
 

@@ -111,7 +111,7 @@ if ($deskripsi == 1) {
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
-
+  <script src="https://kit.fontawesome.com/2f9d74a4a9.js" crossorigin="anonymous"></script>
   <!-- Vendor CSS Files -->
   <link href="<?= base_url() ?>assets/home/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/home/vendor/aos/aos.css" rel="stylesheet">
@@ -170,8 +170,9 @@ if ($deskripsi == 1) {
   <section id="topbar" class="d-flex align-items-center text-white" style="background-color: #017cc4;">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:sman3bojonegoro@gmail.com" class="text-white">sman3bojonegoro@gmail.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i> 081 130 550 222
+        <!-- <i class="bi bi-envelope-fill"></i><a href="mailto:sman3bojonegoro@gmail.com" class="text-white">sman3bojonegoro@gmail.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> 081 130 550 222 -->
+        <span class="text-white">Website Resmi SMA Negeri 3 Bojonegoro</span>
       </div>
       <div class="social-links d-none d-md-block">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -197,10 +198,10 @@ if ($deskripsi == 1) {
           <li><a class="nav-link scrollto <?= $menu == 'home' ? 'active' : '' ?>" href="<?= base_url() ?>">Home</a></li>
           <!-- <li><a class="nav-link scrollto" href="#about">Profile</a></li> -->
           <li><a class="nav-link scrollto <?= $menu == 'berita' ? 'active' : '' ?>" href="<?= base_url() ?>berita">Berita</a></li>
-          <li class="dropdown"><a href="<?= base_url() ?>profiles" class="<?= $menu == 'profile' ? 'active' : '' ?>"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="<?= base_url() ?>profiles" class="<?= $menu == 'profile' ? 'active' : '' ?>"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="<?= base_url() ?>profiles">Profiles</a></li>
-              <li><a href="#">Ekstrakulikuler</a></li>
+              <li><a href="<?= base_url() ?>profiles">Profile</a></li>
+              <li><a href="<?= base_url() ?>profiles#extra">Ekstrakulikuler</a></li>
               <!-- <li class="dropdown"><a href="#"><span>Program Kerja</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Program Kerja 1</a></li>
@@ -210,21 +211,22 @@ if ($deskripsi == 1) {
                   <li><a href="#">Program Kerja 5</a></li>
                 </ul>
               </li> -->
-              <li><a href="#">Visi Misi</a></li>
-              <li><a href="#">Fasilitas</a></li>
-              <li><a href="#">Prestasi</a></li>
+              <li><a href="<?= base_url() ?>profiles#about">Visi Misi</a></li>
+              <li><a href="<?= base_url() ?>profiles#services">Fasilitas</a></li>
+              <li><a href="<?= base_url() ?>profiles#prestasi">Prestasi</a></li>
               <!-- <li><a href="#">Pegawai</a></li> -->
             </ul>
           </li>
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <a class="nav-link scrollto" href="#team">Galeri <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Foto</a></li>
               <li><a href="#">Video</a></li>
             </ul>
-          </li>
+          </li> -->
+          <li><a class="nav-link scrollto" href="<?= base_url() ?>galeri/foto">Galeri</a></li>
           <li><a class="nav-link scrollto" href="#team">Info Kelulusan</a></li>
-          <li><a class="nav-link scrollto" href="#contact">SPTJM KK PPDB 2021</a></li>
+          <li><a class="nav-link scrollto" href="#contact">PPDB</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
