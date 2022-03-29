@@ -171,6 +171,15 @@ class M_post extends CI_Model
 	}
 
 
+	public function get_postppdb()
+	{
+		$this->db->order_by('id_post', 'DESC');
+		$this->db->select('*');
+		$this->db->where('kategori', 7);
+		$this->db->from('smaga_post');
+		$query = $this->db->get();
+		return $query;
+	}
 	public function get_beritas_by_id($id)
 	{
 		$this->db->order_by('id_post', 'DESC');

@@ -2,7 +2,7 @@
 $des = $deskripsi;
 $key = $keyword;
 if (!isset($title)) {
-  $title = "SMAN 3 Bojonegoro";
+  $title = "Website Resmi SMAN 3 Bojonegoro";
 } else {
   $title = $title . " - SMAN 3 Bojonegoro";
 }
@@ -89,7 +89,7 @@ if ($deskripsi == 1) {
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!--<meta http-equiv="Cache-Control" content="public" />-->
   <!--<meta http-equiv="Pragma" content="no-cache" />-->
-  <meta property="og:title" content="<?= $title ?>SMAN 3 Bojonegoro" />
+  <meta property="og:title" content="<?= $title ?>" />
   <meta property="og:type" content="article" />
 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -175,10 +175,10 @@ if ($deskripsi == 1) {
         <span class="text-white">Website Resmi SMA Negeri 3 Bojonegoro</span>
       </div>
       <div class="social-links d-none d-md-block">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="#" class="text-white twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
   </section>
@@ -195,10 +195,10 @@ if ($deskripsi == 1) {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto <?= $menu == 'home' ? 'active' : '' ?>" href="<?= base_url() ?>">Home</a></li>
+          <li><a class="nav-link scrollto <?= $menu == 'home' ? 'active' : '' ?>" href="<?= base_url() ?>"><b>Home</b></a></li>
           <!-- <li><a class="nav-link scrollto" href="#about">Profile</a></li> -->
-          <li><a class="nav-link scrollto <?= $menu == 'berita' ? 'active' : '' ?>" href="<?= base_url() ?>berita">Berita</a></li>
-          <li class="dropdown"><a href="<?= base_url() ?>profiles" class="<?= $menu == 'profile' ? 'active' : '' ?>"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto <?= $menu == 'berita' ? 'active' : '' ?>" href="<?= base_url() ?>berita"><b>Berita</b></a></li>
+          <li class="dropdown"><a href="<?= base_url() ?>profiles" class="<?= $menu == 'profile' ? 'active' : '' ?>"><span><b>Tentang Kami</b></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="<?= base_url() ?>profiles">Profile</a></li>
               <li><a href="<?= base_url() ?>profiles#extra">Ekstrakulikuler</a></li>
@@ -224,9 +224,9 @@ if ($deskripsi == 1) {
               <li><a href="#">Video</a></li>
             </ul>
           </li> -->
-          <li><a class="nav-link scrollto" href="<?= base_url() ?>galeri/foto">Galeri</a></li>
-          <li><a class="nav-link scrollto" href="#team">Info Kelulusan</a></li>
-          <li><a class="nav-link scrollto" href="#contact">PPDB</a></li>
+          <li><a class="nav-link scrollto <?= $menu == 'galeri' ? 'active' : '' ?>" href="<?= base_url() ?>galeri/foto"><b>Galeri</b></a></li>
+          <li><a class="nav-link scrollto" href="#team"><b>Info Kelulusan</b></a></li>
+          <li><a class="nav-link scrollto <?= $menu == 'PPDB' ? 'active' : '' ?>" href="<?= base_url() ?>ppdb"><b>PPDB</b></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

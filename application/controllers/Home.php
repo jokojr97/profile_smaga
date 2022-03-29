@@ -41,22 +41,22 @@ class Home extends CI_Controller
 		$this->load->view('page/_partial/footer');
 	}
 
-	public function product()
+	public function ppdb()
 	{
-		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
-		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
-		$data['title'] = "List Produk";
-		$data["breadcumb"] = "Product";
-		$data["menu"] = "product";
+		$data['deskripsi'] = "Penerimaan peserta didik baru SMA Negeri 3 Bojonegooro";
+		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A, PPDB, pendaftaran";
+		$data['title'] = "PPDB";
+		$data["breadcumb"] = "PPDB";
+		$data["menu"] = "PPDB";
 		$data["url"] = base_url();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		// $data['news'] = $this->m_post->get_beritas();
 		// $data['programs'] = $this->m_program->get_programs();
-		$data['products'] = $this->m_product->get_product();
+		$data['ppdb'] = $this->m_post->get_postppdb();
 		// $this->load->view('page/_partial/header', $data);
 		$this->load->view('page/_partial/header', $data);
-		$this->load->view('page/product', $data);
+		$this->load->view('page/ppdb', $data);
 		$this->load->view('page/_partial/footer');
 	}
 

@@ -183,6 +183,31 @@
 
   </section><!-- End Our Portfolio Section -->
 
+
+  <!-- ======= Counts Section ======= -->
+  <section class="counts bg-smaga">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col text-center" data-aos="fade-up">
+          <div class="count-box">
+            <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
+
+            <div class="section-title">
+              <h2 style="margin-bottom:0;padding-bottom:0"><a href="https://www.unair.ac.id/" target="_blank" style="margin-bottom:0;"><img src="https://www.unair.ac.id/assets/img/icon/ua-logo.png" alt=""></a></h2>
+              <p>Link Universitas</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+
   <!-- ======= Our Portfolio Section ======= -->
   <section id="services" class="blog section-bg">
     <div class="container" data-aos="fade-up" data-aos-delay="100">

@@ -54,13 +54,6 @@ $route['sitemap\.xml'] = 'sitemap/index';
 $route['feed'] = 'rss/index';
 //admin page
 $route['admin/page'] = 'admins/page/index';
-// admin product
-$route['admin/product'] = 'admins/product/index';
-$route['admin/product/add'] = 'admins/product/add';
-$route['admin/product/insert'] = 'admins/product/insert';
-$route['admin/product/edit/(:any)'] = 'admins/product/edit';
-$route['admin/product/delete/(:any)'] = 'admins/product/delete';
-$route['admin/product/update'] = 'admins/product/update';
 //admin Users
 $route['admin/postype/updatetipe'] = 'admins/posttype/updatetipe';
 $route['admin/users'] = 'admins/users/index';
@@ -95,10 +88,9 @@ $route['admin/kcfinder'] = 'admins/teskcfinder/index';
 
 // home
 $route['berita'] = 'home/berita';
+$route['ppdb'] = 'home/ppdb';
 $route['profiles'] = 'home/profiles';
 $route['galeri/foto'] = 'home/galerifoto';
-$route['product/(:any)'] = 'home/detail_product';
-$route['donasi'] = 'home/donasi';
 $route['search/(:any)'] = 'home/search';
 $route['search'] = 'home/search';
 $route['searchproses'] = 'home/searchproses';
@@ -106,20 +98,9 @@ $route['berita/notfound'] = 'home/beritanotfound';
 $route['post/notfound'] = 'home/beritanotfound';
 $route['berita/(:any)'] = 'home/detail';
 $route['post/(:any)'] = 'home/detail';
-$route['kegiatan/(:any)'] = 'home/detail';
 $route['category/(:any)'] = 'home/category';
 $route['posttipe/(:any)'] = 'home/posttipe';
 $route['tag/(:any)'] = 'home/tag';
-$route['tentangkami'] = 'home/tentangkami';
 // hubungi kami
-$route['contact'] = 'home/contact';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-
-// $route['relawan'] = 'admin/relawan';
-// $route['warga'] = 'admin/warga';
-// $route['penyedia'] = 'admin/penyedia';
-// $route['adminsuper'] = 'adminsuper/overview';
-// $route['admin'] = 'admin/overview';
-// $route['proyek'] = 'proyek/overview';
