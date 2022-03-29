@@ -3,7 +3,6 @@
   <img src="<?= base_url() ?>assets/header3.jpg" alt="" class="img-fluid" style="width: 105%;">
 </section><!-- End Hero -->
 
-
 <main id="main">
   <section id="slider">
 
@@ -83,24 +82,14 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-          <img src="<?= base_url() ?>assets/home/img/perpupstakaan.jpg" alt="" class="img-fluid">
-          <h4 class="title mt-3"><a href="">Perpustakaan</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-            occaecati cupiditate non provident</p>
-        </div>
-        <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-          <img src="<?= base_url() ?>assets/home/img/kantin.jpg" alt="" class="img-fluid">
-          <h4 class="title mt-3"><a href="">Kantin</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-            occaecati cupiditate non provident</p>
-        </div>
-        <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
-          <img src="<?= base_url() ?>assets/home/img/mushola.jpg" alt="" class="img-fluid">
-          <h4 class="title mt-3"><a href="">Mushola</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-            occaecati cupiditate non provident</p>
-        </div>
+        <?php foreach ($fasilitas->result() as $row) { ?>
+          <div class="col-lg-4 col-md-6 icon-box bg-white p-3" data-aos="fade-up">
+            <img src="<?= base_url() ?>assets/home/img/<?= $row->image ?>" alt="" class="img-fluid">
+            <h4 class="title mt-3"><a href=""><?= $row->name ?></a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+              occaecati cupiditate non provident</p>
+          </div>
+        <?php } ?>
         <a href="<?= base_url() ?>profiles#services" class="btn btn-block btn-primary text-white bg-smaga" data-aos="fade-up"> Selengkapnya>></a>
       </div>
 
@@ -173,210 +162,26 @@
 
       <div class="row portfolio-container">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>App</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php foreach ($photos->result() as $row) { ?>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>Web</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><?= $row->title ?></h4>
+                <div class="portfolio-links">
+                  <a href="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?= $row->title ?>"><i class="bi bi-plus"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>App</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>Card</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>Web</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>App</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>Card</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>Card</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SMA N 3 Bojonegoro</h4>
-              <!-- <p>Web</p> -->
-              <div class="portfolio-links">
-                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
   </section><!-- End Our Portfolio Section -->
-
-  <!-- ======= Our Team Section ======= -->
-  <!-- <section id="team" class="team section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Pegawai</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
-      </div>
-
-      <div class="row">
-
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
-          <div class="member">
-            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="member">
-            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="member">
-            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <div class="pic"><img src="<?= base_url() ?>assets/home/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a href="#" class="btn btn-block btn-info text-white" data-aos="fade-up"> Selengkapnya>></a>
-      </div>
-
-    </div>
-  </section> -->
-  <!-- End Our Team Section -->
-
-
 
   <!-- ======= Our Portfolio Section ======= -->
   <section id="services" class="blog section-bg">

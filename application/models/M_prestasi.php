@@ -16,4 +16,14 @@ class M_prestasi extends CI_Model
         $hsl = $this->db->get('smaga_facilities');
         return $hsl;
     }
+    function get_fasilitas3()
+    {
+        $hsl = $this->db->limit(3)->get('smaga_facilities');
+        return $hsl;
+    }
+    function get_galerifoto()
+    {
+        $hsl = $this->db->get('smaga_foto');
+        return $hsl;
+    }
 }

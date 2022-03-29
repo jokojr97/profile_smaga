@@ -32,7 +32,8 @@ class Home extends CI_Controller
 		$data["menu"] = "home";
 		$data["url"] = base_url();
 		$data['news'] = $this->m_post->get_beritas();
-		// $data['programs'] = $this->m_galeri->get_foto();
+		$data['fasilitas'] = $this->m_prestasi->get_fasilitas3();
+		$data['photos'] = $this->m_prestasi->get_galerifoto();
 		// $data['products'] = $this->m_facilities->get_facilities();
 		// $this->load->view('page/_partial/header', $data);
 		$this->load->view('page/_partial/header', $data);
