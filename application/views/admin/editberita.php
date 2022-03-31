@@ -3,9 +3,9 @@
 <div class="container-fluid">
   <?= $this->session->flashdata('message'); ?>
   <!-- form -->
-  <form  action="<?= base_url() ?>admin/editberita" method="post" enctype="multipart/form-data">
+  <form action="<?= base_url() ?>admin/editberita" method="post" enctype="multipart/form-data">
     <!-- row -->
-    <div class="row">          
+    <div class="row">
       <!-- col -->
       <div class="col-md-7">
         <input type="hidden" name="id" value="<?= $id_berita ?>">
@@ -14,7 +14,7 @@
         <!-- form-group -->
         <div class="form-group mb-3">
           <label for="judul">Judul</label>
-          <input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Post ..."  value="<?= $berita['judul'] ?>">
+          <input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Post ..." value="<?= $berita['judul'] ?>">
           <?= form_error('judul', '<small class="text-danger">', '</small>') ?>
         </div>
         <!-- // form-group -->
@@ -26,7 +26,7 @@
           <?= $berita['deskripsi'] ?>
           </textarea>
         </div>
-        <!-- // form-group -->            
+        <!-- // form-group -->
       </div>
       <!-- // col -->
       <!-- col -->
@@ -35,13 +35,13 @@
         <div class="form-group mb-3">
           <label for="gambar">Gambar Tumbnail</label>
           <input type="file" name="gambar" class="form-control" value="<?= set_value('gambar') ?>">
-        </div>  
+        </div>
         <!-- // form-group -->
 
         <!-- form-group -->
         <div class="form-group mb-3">
           <label for="tanggal">Tanggal Upload</label>
-          <input type="date" name="tanggal" class="form-control"  value="<?= $berita['date_created'] ?>">
+          <input type="date" name="tanggal" class="form-control" value="<?= $berita['date_created'] ?>">
         </div>
         <!-- // form-group -->
 
@@ -49,22 +49,22 @@
         <div class="form-group mb-3">
           <label for="posttype">Jenis Post</label>
           <select name="posttype" id="posttype" class="form-control">
-              <option value="<?= $berita['post_type'] ?>"><?= $berita['tipepost']['posttype_name'] ?></option>
-            <?php foreach($posttypes->result() as $result) { ?>
+            <option value="<?= $berita['post_type'] ?>"><?= $berita['tipepost']['posttype_name'] ?></option>
+            <?php foreach ($posttypes->result() as $result) { ?>
               <option value="<?= $result->id ?>"><?= $result->posttype_name ?></option>
             <?php } ?>
           </select>
         </div>
         <!-- // form-group -->
-        
+
         <!-- form-group -->
         <div class="form-group mb-3">
           <label for="kategori">Kategori</label>
           <select name="kategori" id="kategori" class="form-control">
-              <option value="<?= $berita['kategori'] ?>"><?= $berita['kategori_name'] ?></option>
-              <?php foreach($categories->result() as $result) { ?>
-                <option value="<?= $result->id ?>"><?= $result->name ?></option>
-              <?php } ?>
+            <option value="<?= $berita['kategori'] ?>"><?= $berita['kategori_name'] ?></option>
+            <?php foreach ($categories->result() as $result) { ?>
+              <option value="<?= $result->id ?>"><?= $result->name ?></option>
+            <?php } ?>
           </select>
         </div>
         <!-- // form-group -->
@@ -88,29 +88,29 @@
           <!-- // row -->
 
           <!-- form-group -->
-          <div class="form-group">  
+          <div class="form-group">
             <label for="list" style="font-weight:normal">Keywords List:</label>
             <select id="list" name="list" class="form-control" multiple>
-              <?php foreach($berita['tags'] as $result) { ?>
+              <?php foreach ($berita['tags'] as $result) { ?>
                 <option><?= $result['name'] ?></option>
               <?php } ?>
             </select>
             <div id="hid">
-              <?php foreach($berita['tags'] as $result) { ?>
-                <input type="hidden" name="tags[]" value="<?= $result['name'] ?>" id="<?= $result['id'] ?>">
+              <?php foreach ($berita['tags'] as $result) { ?>
+                <input type="hidden" name="tags[]" value="<?= $result['name'] ?>" id="<?= str_replace("-", "", $result['slug']); ?>">
               <?php } ?>
             </div>
             <button class="btn btn-block btn-danger mt-2" id="btnRemove">Remove Selected Keywords</button>
           </div>
           <!-- // form-group -->
-        </div>              
+        </div>
         <!-- // form-group -->
 
         <!-- form-group -->
         <div class="form-group mb-3">
           <label for="sumber">Sumber</label>
           <input type="text" name="sumber" class="form-control" value="<?= $berita['sumber_foto'] ?>" placeholder="masukkan sumber foto">
-        </div>         
+        </div>
         <!-- // form-group     -->
 
         <button type="submit" class="btn btn-danger float-right ml-3"><i class="fas fa-upload"></i>&nbsp;&nbsp;Publish</button>
@@ -122,28 +122,29 @@
     <!-- /.row -->
   </form>
   <!-- // form -->
-</div><!--/. container-fluid -->
+</div>
+<!--/. container-fluid -->
 <?php $this->load->view('admin/_partial/footer') ?>
 
 <script>
   // WYSIWIG
   CKEDITOR.replace('post_content', {
-      filebrowserBrowseUrl: '<?= base_url('assets/js/kcfinder/browse.php') ?>',
-      height: '600px',
-      
-      allowedContent: {
-        script: true,
-        div: true,
-        $1: {
-          // This will set the default set of elements
-          elements: CKEDITOR.dtd,
-          attributes: true,
-          styles: true,
-          classes: true
-        }
+    filebrowserBrowseUrl: '<?= base_url('assets/js/kcfinder/browse.php') ?>',
+    height: '600px',
+
+    allowedContent: {
+      script: true,
+      div: true,
+      $1: {
+        // This will set the default set of elements
+        elements: CKEDITOR.dtd,
+        attributes: true,
+        styles: true,
+        classes: true
       }
+    }
   });
-    
+
   // keyword jquery
   const btnAdd = document.querySelector('#btnAdd');
   const btnRemove = document.querySelector('#btnRemove');
@@ -153,71 +154,71 @@
   var i = 2;
 
   btnAdd.onclick = (e) => {
-      e.preventDefault();
+    e.preventDefault();
 
-      // validate the option
-      if (name.value == '') {
-          alert('Please enter the name.');
-          return;
-      }
-      // create a new option
-      const option = new Option(name.value, name.value);
-      // add it to the list
-      sb.add(option, undefined);
+    // validate the option
+    if (name.value == '') {
+      alert('Please enter the name.');
+      return;
+    }
+    // create a new option
+    const option = new Option(name.value, name.value);
+    // add it to the list
+    sb.add(option, undefined);
 
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "hidden");
-      x.setAttribute("name", "tags[]");
-      x.setAttribute("value", name.value);
-      trimname = name.value;
-      trimname = trimname.replaceAll(' ', '');
-      trimname = trimname.replaceAll('-', '');
-      trimname = trimname.replaceAll(',', '');
-      trimname = trimname.replaceAll(';', '');
-      trimname = trimname.replaceAll('.', '');
-      trimname = trimname.replaceAll('?', '');
-      x.setAttribute("id", trimname);
-      hid.appendChild(x);
-      i++;
-      
-      // reset the value of the input
-      name.value = '';
-      name.focus();
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "hidden");
+    x.setAttribute("name", "tags[]");
+    x.setAttribute("value", name.value);
+    trimname = name.value;
+    trimname = trimname.replaceAll(' ', '');
+    trimname = trimname.replaceAll('-', '');
+    trimname = trimname.replaceAll(',', '');
+    trimname = trimname.replaceAll(';', '');
+    trimname = trimname.replaceAll('.', '');
+    trimname = trimname.replaceAll('?', '');
+    x.setAttribute("id", trimname);
+    hid.appendChild(x);
+    i++;
+
+    // reset the value of the input
+    name.value = '';
+    name.focus();
   };
 
   // remove selected option
   btnRemove.onclick = (e) => {
-      e.preventDefault();
-      
-      // save the selected option
-      let selected = [];
+    e.preventDefault();
 
-      for (let i = 0; i < sb.options.length; i++) {
-        selected[i] = sb.options[i].selected;
+    // save the selected option
+    let selected = [];
+
+    for (let i = 0; i < sb.options.length; i++) {
+      selected[i] = sb.options[i].selected;
+    }
+
+    // remove all selected option
+    let index = sb.options.length;
+    while (index--) {
+      if (selected[index]) {
+        trimname = sb.options[index].value;
+        trimname = trimname.replaceAll(' ', '');
+        trimname = trimname.replaceAll('-', '');
+        trimname = trimname.replaceAll(',', '');
+        trimname = trimname.replaceAll(';', '');
+        trimname = trimname.replaceAll('.', '');
+        trimname = trimname.replaceAll('?', '');
+
+        const tagdihapus = document.getElementById(trimname);
+        tagdihapus.remove();
+        console.log(trimname);
+        sb.remove(index);
       }
-
-      // remove all selected option
-      let index = sb.options.length;
-      while (index--) {
-        if (selected[index]) {
-          trimname = sb.options[index].value;
-          trimname = trimname.replaceAll(' ', '');
-          trimname = trimname.replaceAll('-', '');
-          trimname = trimname.replaceAll(',', '');
-          trimname = trimname.replaceAll(';', '');
-          trimname = trimname.replaceAll('.', '');
-          trimname = trimname.replaceAll('?', '');
-
-          const tagdihapus = document.getElementById(trimname);
-          tagdihapus.remove();
-          console.log(trimname);
-          sb.remove(index);
-        }        
-      }
+    }
   };
 
   // REPLACE KATEGORI
-  function catfunction(category){
+  function catfunction(category) {
     const Kategori = document.querySelector('#kategoriinput');
     Kategori.value = category.value;
   }
@@ -226,7 +227,7 @@
 <!-- For Bootstrap 4 -->
 <script src="<?= base_url() ?>assets/plugin/dist/js/BsMultiSelect.bs4.min.js"></script>
 <script>
-  $(function(){
+  $(function() {
     $("#selectprogram").bsMultiSelect();
-    });
+  });
 </script>

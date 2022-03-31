@@ -59,8 +59,9 @@
         <div class="form-group mb-3">
           <label for="kategori">Kategori</label>
           <select name="kategori" id="kategori" class="form-control">
+            <!-- <option value="<?= $berita['kategori'] ?>"><?= $berita['kategori_name'] ?></option> -->
             <?php foreach ($categories->result() as $result) { ?>
-              <option value="<?= $result->slug ?>"><?= $result->name ?></option>
+              <option value="<?= $result->id ?>"><?= $result->name ?></option>
             <?php } ?>
           </select>
         </div>
@@ -100,10 +101,12 @@
           <div class="form-group">
             <label for="list" style="font-weight:normal">Keywords List:</label>
             <select id="list" name="list" class="form-control" multiple>
-              <option value="SMAN 3 Bojonegoro">SMAN 3 Bojonegoro</option>
+              <option value="sman 3 bojonegoro">sman 3 bojonegoro</option>
+              <option value="sma negeri 3 bojonegoro">sma negeri 3 bojonegoro</option>
             </select>
             <div id="hid">
-              <input type="hidden" name="tags[]" value="pt josan multipangan" id="josanmultipangan">
+              <input type="hidden" name="tags[]" value="sman 3 bojonegoro" id="sman3bojonegoro">
+              <input type="hidden" name="tags[]" value="sma negeri 3 bojonegoro" id="smanegeri3bojonegoro">
             </div>
             <button class="btn btn-block btn-danger mt-2" id="btnRemove">Remove Selected Keywords</button>
           </div>
@@ -230,10 +233,9 @@
 </script>
 
 <!-- For Bootstrap 4 -->
-<!-- FOKUS PROGRAM -->
-<!-- <script src="<?= base_url() ?>assets/plugin/dist/js/BsMultiSelect.bs4.min.js"></script>
+<script src="<?= base_url() ?>assets/plugin/dist/js/BsMultiSelect.bs4.min.js"></script>
 <script>
-  $(function(){
+  $(function() {
     $("#selectprogram").bsMultiSelect();
-    });
-</script> -->
+  });
+</script>

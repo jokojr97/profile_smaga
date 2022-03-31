@@ -91,6 +91,8 @@ class Home extends CI_Controller
 		$data["url"] = base_url();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
+		$data['photos'] = $this->m_prestasi->get_galerifoto();
+
 		// $data['news'] = $this->m_post->get_beritas();
 		// $data['programs'] = $this->m_program->get_programs();
 		// $data['products'] = $this->m_product->get_product();

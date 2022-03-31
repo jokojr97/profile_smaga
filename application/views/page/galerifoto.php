@@ -23,125 +23,27 @@
 
             <div class="row portfolio-container">
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>App</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php foreach ($photos->result() as $row) { ?>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>Web</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4><?= $row->title ?></h4>
+                                <div class="portfolio-links">
+                                    <a href="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?= $row->title ?>"><i class="bi bi-plus"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>App</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>Card</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>Web</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portofolio5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>App</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>Card</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>Card</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SMA N 3 Bojonegoro</h4>
-                            <!-- <p>Web</p> -->
-                            <div class="portfolio-links">
-                                <a href="<?= base_url() ?>assets/home/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SMA N 3 Bojonegoro"><i class="bi bi-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
-    </section><!-- End Our Portfolio Section -->\
+    </section><!-- End Our Portfolio Section -->
+
+
 
 </main>

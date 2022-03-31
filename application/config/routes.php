@@ -52,14 +52,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'Home';
 $route['sitemap\.xml'] = 'sitemap/index';
 $route['feed'] = 'rss/index';
+
+// admin site setting
+$route['admin/site'] = 'admins/site/index';
+$route['admin/site/update'] = 'admins/site/update';
 //admin page
 $route['admin/page'] = 'admins/page/index';
 //admin Users
-$route['admin/postype/updatetipe'] = 'admins/posttype/updatetipe';
 $route['admin/users'] = 'admins/users/index';
 $route['admin/users/add'] = 'admins/users/add';
 $route['admin/users/edit'] = 'admins/users/edit';
 $route['admin/users/delete'] = 'admins/users/delete';
+//admin Profile
+// $route['admin/profile'] = 'admins/profile/index';
+// $route['admin/profile/edit'] = 'admins/profile/edit';
 // admin posttype
 $route['admin/tipe_post'] = 'admins/posttype/index';
 $route['admin/postype/edit/(:any)'] = 'admins/posttype/edit';

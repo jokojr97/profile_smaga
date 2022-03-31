@@ -25,9 +25,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="<?= base_url() ?>admin" class="nav-link <?php if ($this->session->flashdata('menu') == "dashboard") {
-                                                                echo "active";
-                                                              } ?>">
+            <a href="<?= base_url() ?>admin" class="nav-link <?= ($this->session->flashdata('menu') == "dashboard") ? 'active' : '' ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -60,9 +58,7 @@
             </ul>
           </li> -->
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "berita") {
-                                          echo "active";
-                                        } ?>">
+            <a href="#" class="nav-link <?= ($this->session->flashdata('menu') == "berita") ? 'active' : '' ?>">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
                 Post
@@ -91,9 +87,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "category") {
-                                          echo "active";
-                                        } ?>">
+            <a href="#" class="nav-link <?= ($this->session->flashdata('menu') == "category") ? 'active' : '' ?>">
               <i class="nav-icon far fa-file-alt"></i>
               <p>
                 Categories & Tags
@@ -116,9 +110,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link <?php if ($this->session->flashdata('menu') == "galeri") {
-                                          echo "active";
-                                        } ?>">
+            <a href="#" class="nav-link <?= ($this->session->flashdata('menu') == "galeri") ? 'active' : '' ?>">
               <i class="fas fa-images  nav-icon"></i>
               <p>
                 Galeri
@@ -140,21 +132,8 @@
               </li>
             </ul>
           </li>
-          <!-- <li class="nav-item has-treeview">
-            <a href="<?= base_url('admin/aspirasi_publik') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "aspirasi") {
-                                                                                  echo "active";
-                                                                                } ?>">
-              <i class="nav-icon fas fa-comments"></i>
-              <p>
-                Aspirasi Publik                
-              </p>
-            </a>
-            
-          </li> -->
           <li class="nav-item has-treeview">
-            <a href="<?= base_url('admin/users') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "facilities") {
-                                                                        echo "active";
-                                                                      } ?>">
+            <a href="<?= base_url('admin/users') ?>" class="nav-link <?= ($this->session->flashdata('menu') == "facilities") ? 'active' : '' ?>">
               <i class="nav-icon fa fa-building"></i>
               <p>
                 Fasilitas
@@ -163,9 +142,7 @@
 
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url('admin/users') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "Profile") {
-                                                                        echo "active";
-                                                                      } ?>">
+            <a href="<?= base_url('admin/site') ?>" class="nav-link <?= ($this->session->flashdata('menu') == "site") ? 'active' : '' ?>">
               <i class="nav-icon fa fa-info"></i>
               <p>
                 Profile
@@ -174,9 +151,7 @@
 
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url('admin/users') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "users") {
-                                                                        echo "active";
-                                                                      } ?>">
+            <a href="<?= base_url('admin/users') ?>" class="nav-link <?= ($this->session->flashdata('menu') == "users") ? 'active' : '' ?>">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Users
@@ -185,9 +160,7 @@
 
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url('admin/change_password') ?>" class="nav-link <?php if ($this->session->flashdata('menu') == "password") {
-                                                                                  echo "active";
-                                                                                } ?>">
+            <a href="<?= base_url('admin/change_password') ?>" class="nav-link <?= ($this->session->flashdata('menu') == "password") ? 'active' : '' ?>">
               <i class="nav-icon fas fa-key"></i>
               <p>
                 Change Password
