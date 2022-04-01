@@ -1,59 +1,76 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Users extends CI_Controller
+{
 
 	public function __construct()
-    {
+	{
 		parent::__construct();
 		$this->load->library('form_validation');
-        $this->load->library('upload');        
-        $this->load->model('m_users');
-        $this->load->helper('file');
+		$this->load->library('upload');
+		$this->load->model('m_users');
+		$this->load->helper('file');
 		$role_id = $this->session->userdata('role_id');
-		if ($role_id == 2) {					
-		} else if ($role_id == 1) {			
-			redirect('adminsuper','refresh');	
+		if ($role_id == 2) {
+		} else if ($role_id == 1) {
+			redirect('adminsuper', 'refresh');
 		} else {
-			redirect('auth','refresh');
+			redirect('auth', 'refresh');
 		}
 	}
 
-    public function index(){
-        // echo "halaman admin page index";
+	public function index()
+	{
+		// echo "halaman admin page index";
 		$this->session->set_flashdata('breadcrumb', 'Users');
 		$this->session->set_flashdata('menu', 'users');
 		$this->session->set_flashdata('menuName', 'List Users');
 		$this->session->set_flashdata('icon', 'fas fa-users');
-		$data['users'] = $this->m_users->get_users();        
+		$data['users'] = $this->m_users->get_users();
 		$this->load->view('admin/users/index.php', $data);
-    }
-    public function add(){
+		unset($_SESSION['message']);
+	}
+	public function change_password()
+	{
+		$this->session->set_flashdata('breadcrumb', 'Users');
+		$this->session->set_flashdata('menu', 'change_password');
+		$this->session->set_flashdata('menuName', 'Change Password');
+		$this->session->set_flashdata('icon', 'fas fa-lock');
+		$data['users'] = $this->m_users->get_users();
+		// $role_id = $this->session->userdata('id');
+		// var_dump($role_id);
+		$this->load->view('admin/users/change_password', $data);
+		unset($_SESSION['message']);
+	}
+	public function add()
+	{
 
-		$this->form_validation->set_rules('name', 'Name', 'required|trim',[
+		$this->form_validation->set_rules('name', 'Name', 'required|trim', [
 			'required' => 'Name is Required',
 		]);
-		$this->form_validation->set_rules('username', 'Username', 'required|trim',[
+		$this->form_validation->set_rules('username', 'Username', 'required|trim', [
 			'required' => 'Username is Required',
 		]);
-		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]',[
+		$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]', [
 			'required' => 'Password is Required',
 		]);
-		$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]',[
+		$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]', [
 			'required' => 'Password is Required',
 		]);
-		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email',[
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', [
 			'required' => 'Email is Required',
 		]);
 
-		if ($this->form_validation->run() == false) {		
+		if ($this->form_validation->run() == false) {
 			$this->session->set_flashdata('breadcrumb', 'Add Users');
 			$this->session->set_flashdata('menu', 'users');
 			$this->session->set_flashdata('menuName', 'Add Users');
 			$this->session->set_flashdata('icon', 'fas fa-users');
-			$data['users'] = $this->m_users->get_users();        
+			$data['users'] = $this->m_users->get_users();
 			$this->load->view('admin/users/add.php', $data);
-		}else {
+			unset($_SESSION['message']);
+		} else {
 			// echo "validasi berhasil";
 			// validasi berhasil
 			$username = $this->input->post('username', true);
@@ -66,7 +83,7 @@ class Users extends CI_Controller {
 			$role = $this->input->post('role', true);
 			$is_active = 1;
 			$date_create = date("Y/m/d");
-			
+
 			$data = [
 				'username' => htmlspecialchars($username),
 				'nama' => htmlspecialchars($name),
@@ -78,34 +95,35 @@ class Users extends CI_Controller {
 				'is_active' => $is_active,
 				'date_created' => date("Y/m/d"),
 			];
-			$this->db->insert('smaga_user', $data);			
+			$this->db->insert('smaga_user', $data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! Akun Anda Berhasil di Buat. Cek Email untuk vertifikasi. Cek di spam jika tidak ada di inbox!!!</div>');
-			redirect(base_url().'admin/users','refresh');
+			redirect(base_url() . 'admin/users', 'refresh');
 			// echo json_encode($data);
 		}
-    }
+	}
 
-	public function edit(){
+	public function edit()
+	{
 		$id = $this->uri->segment(4);
-		if(is_numeric($id) && $id > 0) {
-			
-			$this->form_validation->set_rules('name', 'Name', 'required|trim',[
+		if (is_numeric($id) && $id > 0) {
+
+			$this->form_validation->set_rules('name', 'Name', 'required|trim', [
 				'required' => 'Name is Required',
 			]);
-			$this->form_validation->set_rules('username', 'Username', 'required|trim',[
+			$this->form_validation->set_rules('username', 'Username', 'required|trim', [
 				'required' => 'Username is Required',
 			]);
-			$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]',[
+			$this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[5]|matches[password2]', [
 				'required' => 'Password is Required',
 			]);
-			$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]',[
+			$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]', [
 				'required' => 'Password is Required',
 			]);
-			$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email',[
+			$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email', [
 				'required' => 'Email is Required',
 			]);
 
-			if ($this->form_validation->run() == false) {		
+			if ($this->form_validation->run() == false) {
 				$this->session->set_flashdata('breadcrumb', 'Edit Users');
 				$this->session->set_flashdata('menu', 'users');
 				$this->session->set_flashdata('menuName', 'Edit Users');
@@ -113,7 +131,8 @@ class Users extends CI_Controller {
 				$data['user'] = $this->m_users->get_users_by_id($id);
 				// var_dump($data['users']);
 				$this->load->view('admin/users/edit.php', $data);
-			}else {
+				unset($_SESSION['message']);
+			} else {
 				// echo "validasi berhasil";
 				// validasi berhasil
 				$username = $this->input->post('username', true);
@@ -126,7 +145,7 @@ class Users extends CI_Controller {
 				$role = $this->input->post('role', true);
 				$is_active = 1;
 				$date_create = date("Y/m/d");
-				
+
 				$data = [
 					'username' => htmlspecialchars($username),
 					'nama' => htmlspecialchars($name),
@@ -138,27 +157,27 @@ class Users extends CI_Controller {
 					'is_active' => $is_active,
 					'date_created' => date("Y/m/d"),
 				];
-				$this->db->insert('smaga_user', $data);			
+				$this->db->insert('smaga_user', $data);
 				$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Selamat! Akun Anda Berhasil di Buat. Cek Email untuk vertifikasi. Cek di spam jika tidak ada di inbox!!!</div>');
-				redirect(base_url().'admin/users','refresh');
+				redirect(base_url() . 'admin/users', 'refresh');
 			}
 		}
-    }
+	}
 
-    public function delete($id){
+	public function delete($id)
+	{
 		$id = $this->uri->segment(4);
-		if(is_numeric($id) && $id > 0) {
-			$delete = $this->db->delete('smaga_user', array('id' => $id));			
+		if (is_numeric($id) && $id > 0) {
+			$delete = $this->db->delete('smaga_user', array('id' => $id));
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Berhasil Menghapus User!!!</div>');
-			redirect(base_url().'admin/users','refresh');
-		}else {					
+			redirect(base_url() . 'admin/users', 'refresh');
+		} else {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">User Id, Tidak Sesuai!!!</div>');
-			redirect(base_url().'admin/users','refresh');
+			redirect(base_url() . 'admin/users', 'refresh');
 		}
 		// var_dump($id);
 		// $data['users'] = $this->m_users->get_users();        
 		// $this->load->view('admin/users/index.php', $data);
-    }
-
-
+		unset($_SESSION['message']);
+	}
 }

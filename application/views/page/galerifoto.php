@@ -4,7 +4,7 @@
 
     <!-- ======= Our Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
 
             <div class="section-title">
                 <h2>Galeri</h2>

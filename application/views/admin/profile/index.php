@@ -9,6 +9,7 @@ function limit_words($string, $word_limit)
 ?>
 
 <?= $this->session->flashdata('message'); ?>
+
 <section class="content bg-white p-3">
     <div class="container-fluid">
         <div class="row mt-3">

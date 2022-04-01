@@ -53,6 +53,10 @@ $route['default_controller'] = 'Home';
 $route['sitemap\.xml'] = 'sitemap/index';
 $route['feed'] = 'rss/index';
 
+// admin change password
+$route['admin/change_password'] = 'admins/users/change_password';
+$route['admin/change_password/update'] = 'admins/change_password/update';
+
 // admin site setting
 $route['admin/site'] = 'admins/site/index';
 $route['admin/site/update'] = 'admins/site/update';
@@ -80,6 +84,12 @@ $route['admin/categories/edit/(:any)'] = 'admins/category/edit';
 $route['admin/categories/hapus/(:any)'] = 'admins/category/hapus';
 $route['admin/categories/update'] = 'admins/category/update';
 $route['admin/categories/get_name'] = 'admins/category/getname';
+// admin galeri
+$route['admin/galeri/foto'] = 'admins/galeri/foto';
+$route['admin/galeri/foto/insert'] = 'admins/galeri/foto/insert';
+$route['admin/galeri/foto/edit/(:any)'] = 'admins/galeri/foto/edit';
+$route['admin/galeri/foto/hapus/(:any)'] = 'admins/galeri/foto/hapus';
+$route['admin/galeri/foto/update'] = 'admins/galeri/foto/update';
 // admin tags
 $route['admin/tags/update_keyword_post'] = 'admins/tags/update_keyword_post';
 $route['admin/tags'] = 'admins/tags/index';
