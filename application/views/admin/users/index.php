@@ -36,7 +36,7 @@
                   <td><?= $row->nama ?></td>
                   <td><?= $row->username ?></td>
                   <td><?= $row->email ?></td>
-                  <td><?= ($row->role_id == 1) ? "Admin" : "Users" ?></td>
+                  <td><?= ($row->role_id == 2) ? "Admin" : "Users" ?></td>
                   <td><?= ($row->is_active == 1) ? "Active" : "Non Active" ?></td>
                   <td><?= $row->jenis_kelamin ?></td>
                   <td>

@@ -5,7 +5,7 @@
     <!-- <?= $this->session->flashdata('message'); ?> -->
     <div class="row">
         <div class="col-md-12 p-3 ">
-            <form action="<?= base_url() ?>admin/users/add" method="POST">
+            <form action="<?= base_url() ?>admins/users/edit" method="POST">
                 <!-- row -->
                 <div class="row">
                     <!-- col -->
