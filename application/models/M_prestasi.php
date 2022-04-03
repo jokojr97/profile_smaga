@@ -26,4 +26,9 @@ class M_prestasi extends CI_Model
         $hsl = $this->db->get('smaga_foto');
         return $hsl;
     }
+    function get_galerifoto9()
+    {
+        $hsl = $this->db->limit(9)->get('smaga_foto');
+        return $hsl;
+    }
 }

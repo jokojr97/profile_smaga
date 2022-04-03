@@ -8,13 +8,6 @@ function limit_words($string, $word_limit)
     $words = str_replace('</p>', '', $words);
     return implode(" ", array_splice($words, 0, $word_limit));
 }
-function limit_words2($string, $word_limit)
-{
-    $words = explode(" ", $string);
-    $words = str_replace('</p>', '', $words);
-    $words = str_replace('<p>', '', $words);
-    return implode(" ", array_splice($words, 6, $word_limit));
-}
 function make_slug($string)
 {
     $slug = strtolower($string);
@@ -36,7 +29,7 @@ function make_slug($string)
     <div class="row">
         <div class="col-md-12">
             <div class="table table-responsive">
-                <a href="<?= base_url()  ?>admin/tambah_berita"><button class="btn btn-primary"><span class="fas fa-plus"></span> Tambah Post</button></a>
+                <a href="<?= base_url('admin/galeri/foto/add') ?>"><button class="btn btn-primary"><span class="fas fa-plus"></span> Tambah Foto</button></a>
                 <br>
                 <br>
                 <table class="table table-responsive table-striped table-bordered data mt-3" id="myTable">
@@ -54,11 +47,7 @@ function make_slug($string)
                         <?php
                         $no = 1;
                         foreach ($foto->result() as $row) {
-                            if ($row->id == 21) {
-                                $isi = limit_words2($row->description, 20);
-                            } else {
-                                $isi = limit_words($row->description, 20);
-                            }
+                            $isi = limit_words($row->description, 20);
                         ?>
                             <tr>
                                 <!-- <td><?= $no ?></td> -->
@@ -95,7 +84,7 @@ function make_slug($string)
     function konfirmasi(id) {
         const konfirm = confirm("Apakah Anda yakin ingin menghapus Postingan ini?");
         if (konfirm == true) {
-            window.location.replace("<?= base_url() ?>admin/hapusberita/" + id);
+            window.location.replace("<?= base_url() ?>admin/galeri/foto/hapus/" + id);
         }
     }
 

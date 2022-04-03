@@ -85,11 +85,10 @@ $route['admin/categories/hapus/(:any)'] = 'admins/category/hapus';
 $route['admin/categories/update'] = 'admins/category/update';
 $route['admin/categories/get_name'] = 'admins/category/getname';
 // admin galeri
+$route['admin/galeri/foto/add'] = 'admins/galeri/addfoto';
 $route['admin/galeri/foto'] = 'admins/galeri/foto';
-$route['admin/galeri/foto/insert'] = 'admins/galeri/foto/insert';
-$route['admin/galeri/foto/edit/(:any)'] = 'admins/galeri/foto/edit';
-$route['admin/galeri/foto/hapus/(:any)'] = 'admins/galeri/foto/hapus';
-$route['admin/galeri/foto/update'] = 'admins/galeri/foto/update';
+$route['admin/galeri/foto/edit/(:any)'] = 'admins/galeri/editfoto';
+$route['admin/galeri/foto/hapus/(:any)'] = 'admins/galeri/hapus';
 // admin tags
 $route['admin/tags/update_keyword_post'] = 'admins/tags/update_keyword_post';
 $route['admin/tags'] = 'admins/tags/index';
