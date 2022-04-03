@@ -133,7 +133,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="<?= base_url('admin/users') ?>" class="nav-link <?= ($this->session->flashdata('menu') == "facilities") ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/facilities') ?>" class="nav-link <?= ($this->session->flashdata('menu') == "facilities") ? 'active' : '' ?>">
               <i class="nav-icon fa fa-building"></i>
               <p>
                 Fasilitas

@@ -89,6 +89,11 @@ $route['admin/galeri/foto/add'] = 'admins/galeri/addfoto';
 $route['admin/galeri/foto'] = 'admins/galeri/foto';
 $route['admin/galeri/foto/edit/(:any)'] = 'admins/galeri/editfoto';
 $route['admin/galeri/foto/hapus/(:any)'] = 'admins/galeri/hapus';
+// admin fasilitas
+$route['admin/facilities/add'] = 'admins/facilities/add';
+$route['admin/facilities'] = 'admins/facilities';
+$route['admin/facilities/edit/(:any)'] = 'admins/facilities/edit';
+$route['admin/facilities/delete/(:any)'] = 'admins/facilities/delete';
 // admin tags
 $route['admin/tags/update_keyword_post'] = 'admins/tags/update_keyword_post';
 $route['admin/tags'] = 'admins/tags/index';
