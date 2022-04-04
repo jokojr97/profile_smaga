@@ -44,7 +44,7 @@ class Site extends CI_Controller
         $this->form_validation->set_rules('facebook', 'Facebook', 'required|trim', [
             'required' => 'isi Harus Diisi',
         ]);
-        $this->form_validation->set_rules('twitter', 'Twitter', 'required|trim', [
+        $this->form_validation->set_rules('tiktok', 'Tiktok', 'required|trim', [
             'required' => 'isi Harus Diisi',
         ]);
         $this->form_validation->set_rules('instagram', 'Instagram', 'required|trim', [
@@ -85,7 +85,7 @@ class Site extends CI_Controller
         $email = $this->input->post('email');
         $phone = $this->input->post('phone');
         $facebook = $this->input->post('facebook');
-        $twitter = $this->input->post('twitter');
+        $tiktok = $this->input->post('tiktok');
         $instagram = $this->input->post('instagram');
         $whatsapps = $this->input->post('whatsapps');
         $students = $this->input->post('students');
@@ -110,13 +110,13 @@ class Site extends CI_Controller
                 // echo "Icon nama : " . $icon . "<br>";
                 // echo "Icon dan Logo Diupload<br><br>";
                 // echo var_dump($this->input->post);
-                $this->m_site->update_site($title, $slogan, $address, $logo, $icon, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
+                $this->m_site->update_site($title, $slogan, $address, $logo, $icon, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
             } else if (!empty($_FILES['logo']['name']) && empty($_FILES['icon']['name'])) {
                 $logo = $this->_upload('logo');
                 // echo "Logo Diupload<br><br>";
                 // echo "Logo nama : " . $logo . "<br>";
                 // echo var_dump($this->input->post);
-                $this->m_site->update_sitelogo($title, $slogan, $address, $logo, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
+                $this->m_site->update_sitelogo($title, $slogan, $address, $logo, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
                 // $this->m_site->update_site($title, $slogan, $logo,);
             } else if (empty($_FILES['logo']['name']) && !empty($_FILES['icon']['name'])) {
                 $icon = $this->_upload('icon');
@@ -124,7 +124,7 @@ class Site extends CI_Controller
                 // echo "Icon nama : " . $icon . "<br>";
                 // echo var_dump($title);
 
-                $this->m_site->update_siteicon($title, $slogan, $address, $icon, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
+                $this->m_site->update_siteicon($title, $slogan, $address, $icon, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
                 // $this->m_site->update_site($title, $slogan);
             } else {
                 echo "Kosong<br><br>";
@@ -135,7 +135,7 @@ class Site extends CI_Controller
 
             redirect('admin/site', 'refresh');
         } else {
-            $this->m_site->update_sitekosong($title, $slogan, $address, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
+            $this->m_site->update_sitekosong($title, $slogan, $address, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube);
             redirect('admin/site', 'refresh');
 
             // $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Gambar tidak tersedia, mohon tambahkan logo thumbnail!</div>');

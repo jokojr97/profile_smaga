@@ -73,9 +73,9 @@ function limit_words($string, $word_limit)
                         </div>
                     </div>
                     <div class="form-group mb-3 row">
-                        <label for="twitter" class="col-sm-2 text-capitalize">twitter</label>
+                        <label for="tiktok" class="col-sm-2 text-capitalize">Tiktok</label>
                         <div class="col-sm-10">
-                            <input type="text" name="twitter" class="form-control" placeholder="Your site twitter " value="<?= $profile['twitter'] ?>">
+                            <input type="text" name="tiktok" class="form-control" placeholder="Your site tiktok " value="<?= $profile['tiktok'] ?>">
                         </div>
                     </div>
                     <div class="form-group mb-3 row">

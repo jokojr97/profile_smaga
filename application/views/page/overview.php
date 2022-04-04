@@ -41,7 +41,7 @@
       <div class="row no-gutters">
         <div class="col-lg-6 video-box">
           <img src="<?= base_url() ?>assets/home/img/about.jpg" class="img-fluid" alt="">
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          <a href="https://www.youtube.com/watch?v=llL7Yr92ueg" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
         </div>
 
         <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
@@ -106,7 +106,7 @@
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
           <div class="count-box">
             <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="732" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="<?= $site['students'] ?>" data-purecounter-duration="1" class="purecounter"></span>
             <p>Peserta Didik</p>
           </div>
         </div>
@@ -115,22 +115,22 @@
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
           <div class="count-box">
             <i class="bi bi-live-support" style="color: #46d1ff;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="14630" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Alumni</p>
+            <span data-purecounter-start="0" data-purecounter-end="<?= $site['teachers'] ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Guru</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
           <div class="count-box">
             <i class="bi bi-document-folder" style="color: #c042ff;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Guru</p>
+            <span data-purecounter-start="0" data-purecounter-end="<?= $site['employee'] ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Tenaga Pendidik</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
           <div class="count-box">
             <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="<?= $site['extra'] ?>" data-purecounter-duration="1" class="purecounter"></span>
             <p>Ekstrakulikuler</p>
           </div>
         </div>
@@ -235,74 +235,5 @@
       </div>
     </div>
   </section>
-
-  <!-- ======= Frequently Asked Questions Section ======= -->
-  <!-- <section id="faq" class="faq section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="row  d-flex align-items-stretch">
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up">
-            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
-            <p>
-              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida.
-              Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
-            <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
-            <p>
-              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec
-              ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-              ullamcorper dignissim.
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
-            <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
-            <p>
-              Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-              integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-              Lectus urna duis convallis convallis tellus.
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
-            <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
-            <p>
-              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec
-              ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-              ullamcorper dignissim.
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
-            <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
-            <p>
-              Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel
-              risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida
-              quis blandit turpis cursus in
-            </p>
-          </div>
-
-          <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
-            <h4>Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?</h4>
-            <p>
-              Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc
-              vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in
-              metus vulputate eu scelerisque.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-  <!-- End Frequently Asked Questions Section -->
 
 </main><!-- End #main -->

@@ -21,7 +21,7 @@ foreach ($str as $result) {
   }
   $no++;
 }
-$metaimg = 'logoo.PNG';
+$metaimg = 'header3.jpg';
 
 function limit_words($string, $word_limit)
 {
@@ -47,7 +47,7 @@ function make_slug($string)
 }
 
 if ($deskripsi == 1) {
-  $des = limit_words($berita['judul'], 20);
+  $des = limit_words($berita['judul'], 30);
   $des = str_replace("<p>", "", $des);
   $des = str_replace('<p style="text-align: left;">', "", $des);
   $des = str_replace("<strong>", "", $des);
@@ -66,8 +66,10 @@ if ($deskripsi == 1) {
   $metaimg = $berita['featured_image'];
 } else {
   $des = $deskripsi;
+  $des = limit_words($des, 30);
   $key = $keyword;
-  $metaimg = 'logoo.PNG';
+  $key = limit_words($key, 30);
+  $metaimg = 'header3.jpg';
 }
 ?>
 <!DOCTYPE html>
@@ -81,24 +83,23 @@ if ($deskripsi == 1) {
   <meta name="description" content="<?= $des ?>" />
   <meta name="author" content="JosanMultiPangan" />
   <meta name="keywords" content="<?= $key ?>, <?= $data ?>" />
-  <link rel="shortcut icon" sizes="196x196" href="<?= base_url(); ?>assets/images/logoo.PNG">
-  <!--<link rel="shortcut icon" sizes="196x196" href="<?= base_url(); ?>assets/iconhead.png">-->
+  <link rel="shortcut icon" sizes="196x196" href="<?= base_url(); ?>assets/images/header3.jpg">
 
   <!-- update meta -->
 
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <!--<meta http-equiv="Cache-Control" content="public" />-->
-  <!--<meta http-equiv="Pragma" content="no-cache" />-->
+  <meta http-equiv="Cache-Control" content="public" />
+  <meta http-equiv="Pragma" content="no-cache" />
   <meta property="og:title" content="<?= $title ?>" />
   <meta property="og:type" content="article" />
 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta property="og:url" content="<?= $url ?>" />
-  <!-- <meta property="og:site_name" content="prc-initiative.org" /> -->
+  <meta property="og:site_name" content="sman3bjn.sch.id" />
   <meta property="og:description" content="<?= $key ?>" />
   <meta property="og:image" content="<?= base_url() ?>assets/images/<?= $metaimg ?>" />
-  <meta name="twitter:description" content="<?= $key ?>">
-  <!-- <meta name="twitter:domain" content="smaga.org"> -->
+  <meta name="twitter:description" content="<?= $des ?>">
+  <meta name="twitter:domain" content="sman3bjn.sch.id">
 
   <title><?= $title ?></title>
 
@@ -132,12 +133,6 @@ if ($deskripsi == 1) {
   <!-- Template Main CSS File -->
   <link href="<?= base_url() ?>assets/home/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Mamba - v4.7.0
-  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   <style>
     @media screen and (max-width: 768px) {
       section {
@@ -155,12 +150,6 @@ if ($deskripsi == 1) {
     #map {
       height: 210px;
     }
-
-    /* 
-    #hero {
-      height: calc(110vh - 120px);
-      background: url('<?= base_url() ?>assets/header3.jpg') no-repeat center center fixed;
-    } */
   </style>
 </head>
 
@@ -170,15 +159,14 @@ if ($deskripsi == 1) {
   <section id="topbar" class="d-flex align-items-center text-white" style="background-color: #017cc4;">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <!-- <i class="bi bi-envelope-fill"></i><a href="mailto:sman3bojonegoro@gmail.com" class="text-white">sman3bojonegoro@gmail.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i> 081 130 550 222 -->
         <span class="text-white">Website Resmi SMA Negeri 3 Bojonegoro</span>
       </div>
       <div class="social-links d-none d-md-block">
-        <a href="#" class="text-white twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="text-white facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="text-white instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="text-white linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <!-- <a href="#" class="text-white twitter"><i class="bi bi-twitter"></i></a> -->
+        <a href="<?= $site['facebook'] ?>" class="text-white facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="<?= $site['instagram'] ?>" class="text-white instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="<?= $site['tiktok'] ?>" class="text-white tiktok" target="_blank"><i class="bi bi-tiktok"></i></i></a>
+        <a href="<?= $site['youtube'] ?>" class="text-white youtube" target="_blank"><i class="bi bi-youtube"></i></i></a>
       </div>
     </div>
   </section>
@@ -189,8 +177,6 @@ if ($deskripsi == 1) {
 
       <div class="logo me-auto">
         <h1><a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/home/img/logo.png" alt=""></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="<?= base_url() ?>assets/home/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -217,13 +203,6 @@ if ($deskripsi == 1) {
               <!-- <li><a href="#">Pegawai</a></li> -->
             </ul>
           </li>
-          <!-- <li class="dropdown">
-            <a class="nav-link scrollto" href="#team">Galeri <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Foto</a></li>
-              <li><a href="#">Video</a></li>
-            </ul>
-          </li> -->
           <li><a class="nav-link scrollto <?= $menu == 'galeri' ? 'active' : '' ?>" href="<?= base_url() ?>galeri/foto"><b>Galeri</b></a></li>
           <li><a class="nav-link scrollto" href="#team"><b>Info Kelulusan</b></a></li>
           <li><a class="nav-link scrollto <?= $menu == 'PPDB' ? 'active' : '' ?>" href="<?= base_url() ?>ppdb"><b>PPDB</b></a></li>

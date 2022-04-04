@@ -11,6 +11,7 @@ class Home extends CI_Controller
 		$this->load->model('m_home');
 		$this->load->model('m_product');
 		$this->load->model('m_post');
+		$this->load->model('m_site');
 		$this->load->model('m_prestasi');
 		$this->load->model('m_category');
 		$this->load->model('m_keyword');
@@ -31,6 +32,7 @@ class Home extends CI_Controller
 		$data['title'] = "Website Resmi";
 		$data["menu"] = "home";
 		$data["url"] = base_url();
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['news'] = $this->m_post->get_beritas();
 		$data['fasilitas'] = $this->m_prestasi->get_fasilitas3();
 		$data['photos'] = $this->m_prestasi->get_galerifoto9();
@@ -50,6 +52,7 @@ class Home extends CI_Controller
 		$data["menu"] = "PPDB";
 		$data["url"] = base_url();
 		$data['berita_list'] = $this->m_post->get_posts_all();
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['category_list'] = $this->m_category->get_category();
 		// $data['news'] = $this->m_post->get_beritas();
 		// $data['programs'] = $this->m_program->get_programs();
@@ -68,6 +71,7 @@ class Home extends CI_Controller
 		$data["breadcumb"] = "Profile";
 		$data["menu"] = "profile";
 		$data["url"] = base_url();
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		$data['prestasi'] = $this->m_prestasi->get_prestasi();
@@ -89,6 +93,7 @@ class Home extends CI_Controller
 		$data["breadcumb"] = "Galeri/Foto";
 		$data["menu"] = "galeri";
 		$data["url"] = base_url();
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		$data['photos'] = $this->m_prestasi->get_galerifoto();
@@ -111,6 +116,7 @@ class Home extends CI_Controller
 		$data["breadcumb"] = "Contact Us";
 		$data["menu"] = "contact";
 		$data["url"] = base_url();
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		// $data['news'] = $this->m_post->get_beritas();
@@ -122,35 +128,6 @@ class Home extends CI_Controller
 		$this->load->view('page/_partial/footer');
 	}
 
-
-	public function detail_product()
-	{
-		// $data['deskripsi'] = 1;	
-		$id = $this->uri->segment(3);
-		if (!$id) {
-			$id = $this->uri->segment(2);
-		}
-
-		$data['id'] = $id;
-		$product = $this->m_product->get_product_byid($id);
-		$data['product'] = $product;
-		$data['breadcumb'] = 'Product';
-		$data['menu'] = 'product';
-		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
-		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
-		$data["url"] = base_url();
-		$data['title'] = $product['name'];
-		$data['berita_list'] = $this->m_post->get_posts_all();
-		$data['category_list'] = $this->m_category->get_category();
-
-		if ($product) {
-			$this->load->view('page/_partial/header', $data);
-			$this->load->view('page/detail_product', $data);
-			$this->load->view('page/_partial/footer');
-		} else {
-			redirect('berita/notfound', 'refresh');
-		}
-	}
 
 	public function detail()
 	{
@@ -165,6 +142,7 @@ class Home extends CI_Controller
 		$data['title'] = "SMAN 3 Bojonegoro";
 		$data["breadcumb"] = "Post";
 		$post = $data['berita'];
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		$data['posttype_list'] = $this->m_post->get_type_post();
@@ -189,6 +167,7 @@ class Home extends CI_Controller
 		$data["menu"] = "berita";
 		$data["url"] = base_url() . "berita/notfound";
 		$data['title'] = "Not Found - ";
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['berita_list'] = $this->m_post->get_posts_all();
 		$data['category_list'] = $this->m_category->get_category();
 		$this->load->view('page/_partial/header', $data);
@@ -203,6 +182,7 @@ class Home extends CI_Controller
 		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["url"] = base_url() . "berita";
 		$data['category_list'] = $this->m_category->get_category();
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data["breadcumb"] = "Berita";
 		$data["menu"] = "berita";
 		$data['berita_list'] = $this->m_post->get_posts_all();
@@ -299,6 +279,7 @@ class Home extends CI_Controller
 		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["url"] = base_url() . "search/" . $uri;
 		$data["menu"] = "berita";
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data["breadcumb"] = "Search";
 		$data["text"] = $search_unslug;
 
@@ -365,6 +346,8 @@ class Home extends CI_Controller
 			$uri = $this->uri->segment(2);
 			$segement = 4;
 		}
+
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$get_kategori_id = $this->m_category->get_category_by_id($uri);
 
 		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
@@ -453,6 +436,8 @@ class Home extends CI_Controller
 			$uri = $this->uri->segment(2);
 			$segement = 4;
 		}
+
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$get_posttipe_slug = $this->m_post->get_posttipe_by_slug($uri);
 		$data["url"] = base_url() . "posttipe/" . $uri;
 		$data['title'] = $get_posttipe_slug['posttype_name'];
@@ -533,6 +518,7 @@ class Home extends CI_Controller
 		$data["url"] = base_url() . "tag/" . $uri;
 		$data['breadcumb'] = "Tag";
 		$data['title'] = $get_tag_slug['name'];
+		$data['site'] = $this->db->get_where('smaga_site', ['id' => 1])->row_array();
 		$data['deskripsi'] = "SMAN 3 Bojonegoro Adalah Salah Satu Sekolah Menengah Atas (SMA) Negeri unggulan dengan Akreditasi A dengan fasilitas lengkap mulai dari lab komputer, lapangan basket, futsal, tenis, dll.";
 		$data['keyword'] = "SMAN 3 Bojonegoro, smaga, sma 3, bojonegoro, akreditasi A";
 		$data["menu"] = "berita";

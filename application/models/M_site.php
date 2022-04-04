@@ -6,7 +6,7 @@ class M_site extends CI_Model
         $hsl = $this->db->get('smaga_site')->row_array();
         return $hsl;
     }
-    function update_site($title, $slogan, $address, $logo, $icon, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
+    function update_site($title, $slogan, $address, $logo, $icon, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
     {
         $data = [
             "title" => $title,
@@ -18,7 +18,7 @@ class M_site extends CI_Model
             "email" => $email,
             "phone" => $phone,
             "facebook" => $facebook,
-            "twitter" => $twitter,
+            "tiktok" => $tiktok,
             "instagram" => $instagram,
             "whatsapps" => $whatsapps,
             "students" => $students,
@@ -30,7 +30,7 @@ class M_site extends CI_Model
         $this->db->where('id', 1);
         $this->db->update('smaga_site', $data);
     }
-    function update_sitelogo($title, $slogan, $address, $logo, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
+    function update_sitelogo($title, $slogan, $address, $logo, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
     {
         $data = [
             "title" => $title,
@@ -41,7 +41,7 @@ class M_site extends CI_Model
             "email" => $email,
             "phone" => $phone,
             "facebook" => $facebook,
-            "twitter" => $twitter,
+            "tiktok" => $tiktok,
             "instagram" => $instagram,
             "whatsapps" => $whatsapps,
             "students" => $students,
@@ -53,7 +53,7 @@ class M_site extends CI_Model
         $this->db->where('id', 1);
         $this->db->update('smaga_site', $data);
     }
-    function update_siteicon($title, $slogan, $address, $icon, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
+    function update_siteicon($title, $slogan, $address, $icon, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
     {
         $data = [
             "title" => $title,
@@ -64,7 +64,7 @@ class M_site extends CI_Model
             "email" => $email,
             "phone" => $phone,
             "facebook" => $facebook,
-            "twitter" => $twitter,
+            "tiktok" => $tiktok,
             "instagram" => $instagram,
             "whatsapps" => $whatsapps,
             "students" => $students,
@@ -76,7 +76,7 @@ class M_site extends CI_Model
         $this->db->where('id', 1);
         $this->db->update('smaga_site', $data);
     }
-    function update_sitekosong($title, $slogan, $address, $description, $email, $phone, $facebook, $twitter, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
+    function update_sitekosong($title, $slogan, $address, $description, $email, $phone, $facebook, $tiktok, $instagram, $whatsapps, $students, $teachers, $employee, $extra, $youtube)
     {
         $data = [
             "title" => $title,
@@ -86,7 +86,7 @@ class M_site extends CI_Model
             "email" => $email,
             "phone" => $phone,
             "facebook" => $facebook,
-            "twitter" => $twitter,
+            "tiktok" => $tiktok,
             "instagram" => $instagram,
             "whatsapps" => $whatsapps,
             "students" => $students,
