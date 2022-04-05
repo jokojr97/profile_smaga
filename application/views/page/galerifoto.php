@@ -32,6 +32,7 @@
                                 <h4><?= $row->title ?></h4>
                                 <div class="portfolio-links">
                                     <a href="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?= $row->title ?>"><i class="bi bi-plus"></i></a>
+                                    <p><?= $row->description ?></p>
                                 </div>
                             </div>
                         </div>

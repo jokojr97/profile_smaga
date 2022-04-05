@@ -124,8 +124,6 @@
         </div>
     </section>
 
-
-
     <!-- ======= Counts Section ======= -->
     <section class="counts bg-smaga">
         <div class="container">
@@ -135,7 +133,7 @@
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
                     <div class="count-box">
                         <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="732" data-purecounter-duration="1" class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="<?= $site['students'] ?>" data-purecounter-duration="1" class="purecounter"></span>
                         <p>Peserta Didik</p>
                     </div>
                 </div>
@@ -144,22 +142,22 @@
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
                     <div class="count-box">
                         <i class="bi bi-live-support" style="color: #46d1ff;"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="14630" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Alumni</p>
+                        <span data-purecounter-start="0" data-purecounter-end="<?= $site['teachers'] ?>" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Guru</p>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="count-box">
                         <i class="bi bi-document-folder" style="color: #c042ff;"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1" class="purecounter"></span>
-                        <p>Guru</p>
+                        <span data-purecounter-start="0" data-purecounter-end="<?= $site['employee'] ?>" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Tenaga Pendidik</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
                     <div class="count-box">
                         <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="<?= $site['extra'] ?>" data-purecounter-duration="1" class="purecounter"></span>
                         <p>Ekstrakulikuler</p>
                     </div>
                 </div>
@@ -168,7 +166,6 @@
 
         </div>
     </section><!-- End Counts Section -->
-
 
     <!-- ======= Services Section ======= -->
     <section id="extra" class="services">

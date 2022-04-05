@@ -169,8 +169,9 @@
               <img src="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><?= $row->title ?></h4>
+                <?= $row->description ?>
                 <div class="portfolio-links">
-                  <a href="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?= $row->title ?>"><i class="bi bi-plus"></i></a>
+                  <a href="<?= base_url() ?>assets/home/img/portfolio/<?= $row->image ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?= $row->title ?>" description="<?= $row->description ?>"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
