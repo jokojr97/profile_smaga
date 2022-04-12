@@ -24,8 +24,8 @@ class M_facilities extends CI_Model
             "name" => $name,
             "description" => $description,
             "image" => $image,
+            "is_active" => 1,
             "date_created" => $date_created,
-            "is_active" => 1
         ];
         $this->db->where('id', $id);
         $this->db->update('smaga_facilities', $data);

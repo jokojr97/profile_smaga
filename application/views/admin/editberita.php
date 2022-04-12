@@ -202,6 +202,7 @@
     while (index--) {
       if (selected[index]) {
         trimname = sb.options[index].value;
+        trimname = trimname.toLowerCase();
         trimname = trimname.replaceAll(' ', '');
         trimname = trimname.replaceAll('-', '');
         trimname = trimname.replaceAll(',', '');

@@ -27,6 +27,7 @@
                 <div class="form-group mb-3">
                     <label for="gambar">Gambar</label>
                     <input type="file" name="gambar" class="form-control" value="<?= set_value('gambar') ?>">
+                    <?= form_error('gambar', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group mb-3">
                     <label for="judul">nama</label>

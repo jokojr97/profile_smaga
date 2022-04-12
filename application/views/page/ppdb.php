@@ -11,12 +11,16 @@
                     <br>
                     <?php foreach ($ppdb->result() as $row) { ?>
                         <div class="row mt-3">
-                            <div class="col-4">
-                                <img src="<?= base_url() ?>assets/images/<?= $row->featured_image ?>" alt="" class="img-fluid">
+                            <div class="col-md-4">
+                                <a href="<?= base_url() ?>post/<?= $row->slug ?>">
+                                    <img src="<?= base_url() ?>assets/images/<?= $row->featured_image ?>" alt="" class="img-fluid mb-3">
+                                </a>
                             </div>
-                            <div class="col-8">
-                                <h6 class="text-danger"><b>PPDB SMAN 3 Bojonegoro</b></h6>
-                                <h6><b><?= limit_words($row->judul, 20) ?></b></h6>
+                            <div class="col-md-8">
+                                <h6 class="text-danger mb-1"><b>PPDB SMAN 3 Bojonegoro</b></h6>
+                                <a href="<?= base_url() ?>post/<?= $row->slug ?>">
+                                    <h6><b><?= limit_words($row->judul, 20) ?></b></h6>
+                                </a>
                                 <p><?= limit_words($row->deskripsi, 30) ?></p>
                             </div>
                         </div>

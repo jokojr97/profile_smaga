@@ -38,12 +38,6 @@ class Facilities extends CI_Controller
         $this->form_validation->set_rules('judul', 'Judul', 'required|trim', [
             'required' => 'Judul Harus Diisi',
         ]);
-        $this->form_validation->set_rules('deskripsi', 'deskripsi', 'required|trim', [
-            'required' => 'isi Harus Diisi',
-        ]);
-        $this->form_validation->set_rules('gambar', 'gambar', 'required|trim', [
-            'required' => 'Gambar Harus Diisi',
-        ]);
 
         // validasi form
         if ($this->form_validation->run() == false) {
@@ -61,9 +55,9 @@ class Facilities extends CI_Controller
             unset($_SESSION['message']);
         } else {
             // jika validasi benar
-            $this->_add();
-            redirect('admin/facilities', 'refresh');
-            // var_dump($this->input->post('programs'));
+            // $this->_add();
+            // redirect('admin/facilities', 'refresh');
+            var_dump($this->input->post('programs'));
         }
     }
 
